@@ -9839,28 +9839,7 @@ body {
 /* 갤러리 컨테이너 */
 .swiper-container {
     width: 100%;
-    height: 80vh;
     margin: 20px auto;
-}
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    width: 250px;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
 }
 
 .swiper-slide img{
@@ -9868,6 +9847,16 @@ body {
     border-radius : 30px;
     object-fit: contain;  /* 비율을 유지하며, div를 완전히 채움. 잘림 발생 가능 */
     object-position: center; /* 이미지의 중심을 기준으로 크기 맞추기 */
+}
+
+.gallery-thumbs .swiper-slide{
+    height: 100%;
+    opacity: 0.4;
+}
+
+.gallery-thumbs .swiper-slide-active{
+    height: 100%;
+    opacity: 1;
 }
 
 /* RSVP Style */

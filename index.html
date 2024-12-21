@@ -12,7 +12,6 @@
     <link href="images/favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
     <link href="styles/main.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
-
     <!-- Swiper JS -->
     <script src="scripts/swiper.min.js"></script>
     <script>
@@ -67,29 +66,51 @@
             </div>
         </div>
         <div class="ww-section" id="gallery">
-            <div class="swiper-container">
+            <div class="swiper-container gallery-top">
+
+                <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="images/img1.jpeg"></div>
                     <div class="swiper-slide"><img src="images/img2.jpeg"></div>
                     <div class="swiper-slide"><img src="images/img3.jpeg"></div>
                     <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/img1.jpeg"></div>
+                    <div class="swiper-slide"><img src="images/img2.jpeg"></div>
+                    <div class="swiper-slide"><img src="images/img3.jpeg"></div>
+                    <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                </div>
             </div>
 
             <!-- Link Swiper's CSS -->
-            <link rel="stylesheet" href="styles/swiper.min.css">
+            <link rel="stylesheet" href="styles/swiper.css">
         
             <!-- Initialize Swiper -->
             <script>
-                var swiper = new Swiper('.swiper-container', {
+                var galleryTop = new Swiper('.gallery-top', {
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
                     pagination: '.swiper-pagination',
-                    paginationType: 'fraction',
                     spaceBetween: 10,
+                    loop:true,
+                    loopedSlides: 4, //looped slides should be the same     
                 });
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    spaceBetween: 10,
+                    slidesPerView: 4,
+                    touchRatio: 0.2,
+                    loop:true,
+                    loopedSlides: 4, //looped slides should be the same
+                    slideToClickedSlide: true
+                });
+                galleryTop.params.control = galleryThumbs;
+                galleryThumbs.params.control = galleryTop;
 
             </script>
         </div>
