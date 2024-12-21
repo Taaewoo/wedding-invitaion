@@ -67,7 +67,6 @@
         </div>
         <div class="ww-section" id="gallery">
             <div class="swiper-container gallery-top">
-
                 <div class="swiper-pagination"></div>
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="images/img1.jpeg"></div>
@@ -75,9 +74,6 @@
                     <div class="swiper-slide"><img src="images/img3.jpeg"></div>
                     <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                 </div>
-                <!-- Add Arrows -->
-                <div class="swiper-button-next swiper-button-white"></div>
-                <div class="swiper-button-prev swiper-button-white"></div>
             </div>
             <div class="swiper-container gallery-thumbs">
                 <div class="swiper-wrapper">
@@ -100,6 +96,7 @@
                     spaceBetween: 10,
                     loop:true,
                     loopedSlides: 4, //looped slides should be the same     
+                    effect: 'fade',
                 });
                 var galleryThumbs = new Swiper('.gallery-thumbs', {
                     spaceBetween: 10,
