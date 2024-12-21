@@ -68,7 +68,22 @@ body {
     color: #212529;
     text-align: left;
     background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
 }
+
+  /* wrapper로 전체 콘텐츠 감싸기 */
+  .wrapper {
+    width: 100vw;
+    max-width: 500px; /* 모바일 너비 고정 */
+    height: 100%; /* 전체 화면 세로 길이 유지 */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+  }
 
 
 [tabindex="-1"]:focus {
@@ -580,30 +595,6 @@ pre code {
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-}
-
-@media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
-}
-
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
 }
 
 .container-fluid {
@@ -3543,10 +3534,6 @@ tbody.collapse.show {
     white-space: nowrap;
 }
 
-.gift-btn-group {
-    width: 100% !important;
-}
-
 .btn-group,
 .btn-group-vertical {
     position: relative;
@@ -4961,10 +4948,6 @@ tbody.collapse.show {
     margin-bottom: 0.75rem;
 }
 
-.gift-columns .gift {
-    margin-bottom: 0.75rem;
-}
-
 @media (min-width: 576px) {
     .card-columns {
         -webkit-column-count: 2;
@@ -4979,40 +4962,6 @@ tbody.collapse.show {
     }
 }
 
-@media (min-width: 576px) {
-    .gift-columns {
-        -webkit-column-count: 2;
-        column-count: 2;
-        -webkit-column-gap: 1.25rem;
-        column-gap: 1.25rem;
-    }
-
-    .gift-columns .gift {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-.gift-img {
-    border: 1px lightgrey;
-}
-
-.gift-btn {
-    margin: auto;
-    width: 100%;
-    border-color: lightgrey;
-    background: white;
-    font-family: 'Noto Serif KR', serif;
-}
-
-.gift-selected {
-    filter: brightness(50%);
-}
-
-.gift-message {
-    width: 100%;
-    border-color: lightgrey;
-}
 
 .breadcrumb {
     display: -webkit-box;
@@ -6466,12 +6415,6 @@ a.bg-danger:hover, a.bg-danger:focus,
 button.bg-danger:hover,
 button.bg-danger:focus {
     background-color: #bd2130 !important;
-}
-
-.bg-gift {
-    background: url("../images/gift/gift-background.png") no-repeat;
-    width: 100%;
-    background-size: cover;
 }
 
 .bg-light {
@@ -8049,6 +7992,26 @@ button.bg-dark:focus {
     margin-left: 3rem !important;
 }
 
+.mt-6,
+.my-6 {
+    margin-top: 4rem !important;
+}
+
+.mr-6,
+.mx-6 {
+    margin-right: 4rem !important;
+}
+
+.mb-6,
+.my-6 {
+    margin-bottom: 4rem !important;
+}
+
+.ml-6,
+.mx-6 {
+    margin-left: 4rem !important;
+}
+
 .p-0 {
     padding: 0 !important;
 }
@@ -8215,6 +8178,44 @@ button.bg-dark:focus {
 .ml-auto,
 .mx-auto {
     margin-left: auto !important;
+}
+
+/* font size */ 
+@media (max-width: 450px) {
+    .fs-1 {
+        font-size: 1em;
+    }
+    
+    .fs-2 {
+        font-size: 1.3em;
+    }
+
+    .fs-3 {
+        font-size: 1.6em;
+    }
+
+    .fs-4 {
+        font-size: 2.0em;
+    }
+}
+
+@media (min-width: 600px) {
+    .fs-1 {
+        font-size: 1.5em;
+    }
+
+    .fs-2 {
+        font-size: 1.8em;
+    }
+
+    .fs-3 {
+        font-size: 2.0em;
+    }
+
+    .fs-4 {
+        font-size: 2.2em;
+    }
+    
 }
 
 @media (min-width: 576px) {
@@ -9760,62 +9761,10 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/img3.png") no-repeat center center;
+    background: url("../images/img3_add.jpeg") no-repeat center center;
     background-size: cover;
-    background-position: 50%;
-    height: 90vh;
-    min-height: 480px;
-}
-
-.ww-home-page .ww-wedding-announcement {
     width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    height: 140%;
-    text-align: center;
-    color: #fff;
-    text-shadow: px 2px 2px rgba(0, 0, 0, 0.4);
-    letter-spacing: 2px;
-}
-
-.ww-home-page .ww-wedding-announcement .ww-announcement-container {
-    max-width: 600px;
-    text-align: center;
-    z-index: 999;
-}
-
-.ww-home-page .ww-wedding-announcement img {
-    max-height: 350px;
-    width: auto;
-}
-
-@media (max-width: 480px) {
-    .ww-home-page .ww-wedding-announcement img {
-        max-height: 250px;
-        width: auto;
-    }
-}
-
-.ww-home-page .ww-wedding-announcement .ww-couple-name {
-    font-size: 70px;
-}
-
-@media (max-width: 576px) {
-    .ww-home-page .ww-wedding-announcement .ww-couple-name {
-        font-size: 50px;
-    }
-}
-
-.ww-home-page:before {
-    content: "";
-    /*background-color: rgba(245, 138, 119, 0.2);*/
-    width: 100%;
-    height: 100%;
     height: 100vh;
-    min-height: 480px;
-    position: absolute;
-    left: 0;
-    top: 0;
 }
 
 /* Nav Bar Style */
@@ -9887,62 +9836,27 @@ body {
     background-color: #f58a77;
 }
 
-/* Photo Gallery Style */
-.ww-photo-gallery .ww-category-filter a {
-    display: inline-block;
-    margin: 0 10px 6px 0;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-radius: 3px;
+/* 갤러리 컨테이너 */
+.swiper-container {
+    width: 100%;
+    margin: 20px auto;
 }
 
-.ww-photo-gallery .ww-gallery {
-    min-height: 500px;
+.swiper-slide img{
+    width: 100%;
+    border-radius : 30px;
+    object-fit: contain;  /* 비율을 유지하며, div를 완전히 채움. 잘림 발생 가능 */
+    object-position: center; /* 이미지의 중심을 기준으로 크기 맞추기 */
 }
 
-.ww-gift-section .ww-gift {
-    min-height: 100px;
+.gallery-thumbs .swiper-slide{
+    height: 100%;
+    opacity: 0.4;
 }
 
-.ww-photo-gallery .card-columns .card {
-    border: none;
-    margin-bottom: 15px;
-    border-radius: none;
-}
-
-.ww-gift-section .gift-columns .gift {
-    border: none;
-    margin-bottom: 15px;
-    border-radius: none;
-}
-
-@media (max-width: 992px) {
-    .ww-photo-gallery .card-columns {
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media (max-width: 992px) {
-    .ww-gift-section .gift-columns {
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
-}
-
-@media (max-width: 576px) {
-    .ww-photo-gallery .card-columns {
-        -webkit-column-count: 1;
-        column-count: 1;
-    }
-}
-
-@media (max-width: 576px) {
-    .ww-gift-section .gift-columns {
-        -webkit-column-count: 2;
-        column-count: 2;
-    }
+.gallery-thumbs .swiper-slide-active{
+    height: 100%;
+    opacity: 1;
 }
 
 /* RSVP Style */
@@ -10013,9 +9927,6 @@ body {
 
 .ww-map {
     background-color: rgba(0, 0, 0, 0.3);
-    min-height: 500px;
-    width: 100%;
-    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
