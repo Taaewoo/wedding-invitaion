@@ -9946,11 +9946,11 @@ body {
 }
 
 .ww-section {
-    padding: 50px 0;
+    padding: 5% 0;
 }
 
-#gallery {
-    padding: 0% 2%
+#gallery.ww-section {
+    padding: 5% 2%
 }
 
 .btn-primary {
