@@ -6,16 +6,3 @@ $(document).ready(function () {
         return false;
     });
 })
-
-let observer = new IntersectionObserver((e)=>{
-    e.forEach((box)=>{
-        if (box.isIntersecting){
-            box.target.style.opacity = 1;
-        }
-    })
-}, {threshold: 0.2})
-
-let wwsection = document.querySelectorAll('.ww-section')
-wwsection.forEach((d)=>{
-    observer.observe(d)
-})
