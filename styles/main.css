@@ -9765,6 +9765,7 @@ body {
     background-size: cover;
     width: 100%;
     height: 100vh;
+    margin-bottom: 10px;
 }
 
 /* Nav Bar Style */
@@ -9947,6 +9948,8 @@ body {
 
 .ww-section {
     padding: 10px 0;
+    opacity: 0;
+    transition: all 1.5s;
 }
 
 #gallery.ww-section {
