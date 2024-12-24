@@ -13,7 +13,7 @@ let observer = new IntersectionObserver((e)=>{
             box.target.style.opacity = 1;
         }
     })
-})
+}, {threshold: 0.2})
 
 let wwsection = document.querySelectorAll('.ww-section')
 wwsection.forEach((d)=>{
