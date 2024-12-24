@@ -32,6 +32,20 @@
             <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
             </div>
         </div>
+        <script>
+            // 최대 높이 계산 및 적용 함수
+            function setMaxHeight() {
+              // 기기의 최대 높이 구하기
+              var maxHeight = window.innerHeight || document.documentElement.clientHeight;
+        
+              // 해당 div에 최대 높이 적용
+              var container = document.querySelector('.ww-home-page');
+              container.style.height = maxHeight + 'px';
+            }
+        
+            // 페이지가 로드되면 한 번 실행
+            window.onload = setMaxHeight;
+        </script>
         <div class="ww-section" id="couple">
             <div class="container">
                 <div class="row text-center">
