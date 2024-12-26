@@ -9958,6 +9958,13 @@ body {
     padding: 10px 2%
 }
 
+.gallery-container{
+    border-radius: 1.5em;
+    background-color: #FDFFFC;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1px 10px;
+}
+
 .btn-primary {
     color: #fff;
 }
@@ -10046,9 +10053,10 @@ body {
 }
 
 .collapsible {
-    background-color: #777;
-    color: white;
+    background-color: lightgoldenrodyellow;
+    color: black;
     border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     cursor: pointer;
     padding: 18px;
     width: 80%;
@@ -10059,19 +10067,19 @@ body {
 }
 
 .active, .collapsible:hover {
-background-color: #555;
+    background-color: lightgoldenrodyellow;
 }
 
-.collapsible:after {
-content: '\002B';
-color: white;
-font-weight: bold;
-float: right;
-margin-left: 5px;
+    .collapsible:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
-content: "\2212";
+    content: "\2212";
 }
 
 .pay-container{
@@ -10088,6 +10096,7 @@ content: "\2212";
     width: 80%;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
-    background-color: #f1f1f1;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
 }
 
