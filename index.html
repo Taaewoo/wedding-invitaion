@@ -47,58 +47,48 @@
             window.onload = setMaxHeight;
         </script>
         <div class="ww-section" id="couple">
-            <div class="container">
-                <div class="row text-center">
-<!--                    <div class="col-md-6">-->
-<!--                        <div class="mt-3">-->
-<!--                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">-->
-<!--                                뚜자친구? 뚜부인? 뚜각시?</h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="col-md-6">-->
-<!--                        <div class="mt-3">-->
-<!--                            <h3 class="h2 ww-title" style="font-family: 'Sunflower', sans-serif; font-size:1.5em">-->
-<!--                                판교 뚜벅쵸</h3>-->
-<!--                        </div>-->
-<!--                    </div>-->
-                    <div class="col-md-12">
-                        <p class="mt-5 mb-5 fs-4" style="font-family: 'Pretendard'; font-weight: bold">
-                            Taewoo & Ran
-                        </p>
-                        <p class="mt-6 mb-5 fs-3" style="font-family: 'Pretendard'; font-weight: bold;">
-                            저희 결혼합니다
-                        </p>
-                        <p class="mt-6 fs-1" style="font-family: 'Pretendard'; line-height: 1.2;">
-                            7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
-                            처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로 '평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br>가까이에서 축복해 주시면<br><br>감사하겠습니다.
-                        </p>
-                        <p class="mt-5 mb-5 fs-2" style="font-family: 'Pretendard'; font-weight: bold;">
-                            신랑 박태우 &nbsp · &nbsp 신부 최란
-                        </p>
-                    </div>
+            <div class="container text-center">
+                <div class="col-md-12">
+                    <p class="mt-5 mb-5 fs-4" style="font-family: 'Pretendard'; font-weight: bold">
+                        Taewoo & Ran
+                    </p>
+                    <p class="mt-6 mb-5 fs-3" style="font-family: 'Pretendard'; font-weight: bold;">
+                        저희 결혼합니다
+                    </p>
+                    <p class="mt-6 fs-1" style="font-family: 'Pretendard'; line-height: 1.2;">
+                        7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
+                        처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로 '평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br>가까이에서 축복해 주시면<br><br>감사하겠습니다.
+                    </p>
+                    <p class="mt-5 mb-5 fs-2" style="font-family: 'Pretendard'; font-weight: bold;">
+                        신랑 박태우 &nbsp · &nbsp 신부 최란
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="ww-section" id="gallery">
             <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">Gallery</h2>
-            <div class="swiper-container gallery-top">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/img1.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img2.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img3.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+            <!-- <div class="gallery-container" style="background-color: lightgrey; padding: 1px 10px;"> -->
+                <div class="swiper-container gallery-top">
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/img1.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img2.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img3.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                    </div>
                 </div>
-            </div>
-            <div class="swiper-container gallery-thumbs">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/img1.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img2.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img3.jpeg"></div>
-                    <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                <div class="swiper-container gallery-thumbs">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/img1.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img2.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img3.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                    </div>
                 </div>
-            </div>
+            <!-- </div> -->
 
             <!-- Link Swiper's CSS -->
             <link rel="stylesheet" href="styles/swiper.css">
@@ -111,15 +101,15 @@
                     pagination: '.swiper-pagination',
                     spaceBetween: 10,
                     loop:true,
-                    loopedSlides: 4, //looped slides should be the same     
+                    loopedSlides: 5, //looped slides should be the same     
                     effect: 'fade',
                 });
                 var galleryThumbs = new Swiper('.gallery-thumbs', {
                     spaceBetween: 10,
-                    slidesPerView: 4,
+                    slidesPerView: 5,
                     touchRatio: 0.2,
                     loop:true,
-                    loopedSlides: 4, //looped slides should be the same
+                    loopedSlides: 5, //looped slides should be the same
                     slideToClickedSlide: true
                 });
                 galleryTop.params.control = galleryThumbs;
@@ -128,19 +118,136 @@
             </script>
         </div>
 
-        <div class="ww-section bg-light" id="donation">
-            <div class="ww-photo-gallery">
-                <div class="container">
-                    <div class="col text-center">
-                        <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">마음 전하실 곳</h2>
-                        <br>
-<!--                        <a id="link-kakaopay" href="http://kko.to/C3867c2df" target="_blank"><img alt="카카오페이 송금" src="images/btn_send_regular.png"></a><br>-->
-                        <br>
+        <div class="ww-section" id="contact">
+            <div class="container text-center">
+                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">축하 연락하기</h2>
+                <div class="row fs-2">
+                    <div class="col-6 mr-4">
+                        신랑 &nbsp&nbsp&nbsp 박태우
                     </div>
-                    <div class="row text-center">
+                    <a href="tel:0000-0000" class="contact-button">
+                        <img src="images/call.png" alt="전화 걸기">
+                    </a>
+                    <a href="sms:010-4165-7696" class="contact-button">
+                        <img src="images/message.png" alt="전화 걸기">
+                    </a>
+                    </button>
+                </div>
+                <div class="row fs-2">
+                    <div class="col-6 mr-4">
+                        신부 &nbsp&nbsp&nbsp 최&nbsp&nbsp&nbsp란
+                    </div>
+                    <a href="tel:010-2044-6024" class="contact-button">
+                        <img src="images/call.png" alt="전화 걸기">
+                    </a>
+                    <a href="sms:010-2044-6024" class="contact-button">
+                        <img src="images/message.png" alt="전화 걸기">
+                    </a>
+                    </button>
+                </div>
+                <br/>
+                <div class="family-container">
+                    <div style="margin-top:1rem; margin-right: 1rem;">
+                        <span>신랑측 혼주</span>
+                        <div class="row">
+                            <span>아버지</span>
+                            &nbsp
+                            <span>박찬용</span>
+                            &nbsp
+                            <a href="tel:010-2044-6024" class="family-contact-button">
+                                <img src="images/call.png" alt="전화 걸기">
+                            </a>
+                            <a href="sms:010-2044-6024" class="family-contact-button">
+                                <img src="images/message.png" alt="전화 걸기">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <span>어머니</span>
+                            &nbsp
+                            <span>이진숙</span>
+                            &nbsp
+                            <a href="tel:010-2044-6024" class="family-contact-button">
+                                <img src="images/call.png" alt="전화 걸기">
+                            </a>
+                            <a href="sms:010-2044-6024" class="family-contact-button">
+                                <img src="images/message.png" alt="전화 걸기">
+                            </a>
+                        </div>
+                    </div>
+                    <div style="margin-top:1rem; margin-left: 1rem;">
+                        <span>신부측 혼주</span>
+                        <div class="row">
+                            <span>아버지</span>
+                            &nbsp
+                            <span>최성모</span>
+                            &nbsp
+                            <a href="tel:010-2044-6024" class="family-contact-button">
+                                <img src="images/call.png" alt="전화 걸기">
+                            </a>
+                            <a href="sms:010-2044-6024" class="family-contact-button">
+                                <img src="images/message.png" alt="전화 걸기">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <span>어머니</span>
+                            &nbsp
+                            <span>조병순</span>
+                            &nbsp
+                            <a href="tel:010-2044-6024" class="family-contact-button">
+                                <img src="images/call.png" alt="전화 걸기">
+                            </a>
+                            <a href="sms:010-2044-6024" class="family-contact-button">
+                                <img src="images/message.png" alt="전화 걸기">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div class="ww-section" id="donation">
+            <div class="container">
+                <div class="col text-center">
+                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">마음 전하실 곳</h2>
+                </div>
+                <div class="toggle-container">
+                    <button class="toggle-button" id="toggleButton1" onclick="toggleContent('toggleButton1', 'content1')">
+                      펼치기
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="toggle-content" id="content1">
+                      <p>첫 번째 내용이 들어갑니다.</p>
+                    </div>
+                </div>
+                
+                <div class="toggle-container">
+                    <button class="toggle-button" id="toggleButton2" onclick="toggleContent('toggleButton2', 'content2')">
+                      펼치기
+                      <span class="arrow">▼</span>
+                    </button>
+                    <div class="toggle-content" id="content2">
+                      <p>두 번째 내용이 들어갑니다.</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function toggleContent(buttonId, contentId) {
+                    const content = document.getElementById(contentId);
+                    const button = document.getElementById(buttonId);
+                    const arrow = button.querySelector('.arrow');
+                    
+                    // 컨텐츠가 펼쳐졌는지 접혔는지 확인
+                    if (content.style.display === "none" || content.style.display === "") {
+                        content.style.display = "block";  // 펼치기
+                        arrow.style.transform = "rotate(180deg)";  // 화살표 방향 위로 변경
+                        button.innerHTML = '접기 <span class="arrow">▲</span>';
+                    } else {
+                        content.style.display = "none";  // 접기
+                        arrow.style.transform = "rotate(0deg)";  // 화살표 방향 아래로 변경
+                        button.innerHTML = '펼치기 <span class="arrow">▼</span>';
+                    }
+                    }
+            </script>
         </div>
 
         <div class="ww-section" id="map">
@@ -177,14 +284,6 @@
                             도보 5~10분
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ww-section bg-light" id="comment">
-            <div class="ww-photo-gallery">
-                <div class="container">
-                    
                 </div>
             </div>
         </div>

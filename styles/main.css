@@ -67,7 +67,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #fff;
+    background-color: #FDFFFC;
     display: flex;
     justify-content: center;
 }
@@ -610,8 +610,9 @@ pre code {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;      /* 세로 가운데 정렬 */
 }
 
 .no-gutters {
@@ -8198,13 +8199,13 @@ button.bg-dark:focus {
     }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 450px) {
     .fs-1 {
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
 
     .fs-2 {
-        font-size: 1.8em;
+        font-size: 1.6em;
     }
 
     .fs-3 {
@@ -9840,7 +9841,7 @@ body {
 /* 갤러리 컨테이너 */
 .swiper-container {
     width: 100%;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 .swiper-slide img{
@@ -9947,6 +9948,7 @@ body {
 }
 
 .ww-section {
+    margin: 4em 0;
     padding: 10px 0;
     opacity: 0;
     transition: all 1.5s;
@@ -9980,4 +9982,57 @@ body {
     bottom: 0;
     left: 0;
     margin: 0px 15px 15px 15px;
+}
+
+.contact-button img {
+    width: 3em;  /* 버튼 크기 조절 */
+    height: 3em;
+}
+
+.family-contact-button img {
+    width: 2em;  /* 버튼 크기 조절 */
+    height: 2em;
+}
+
+.toggle-container {
+    width: 300px;
+    margin-bottom: 20px; /* 버튼들 간의 간격 */
+  }
+  
+.toggle-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.arrow {
+    font-size: 20px;
+    transition: transform 1s ease;
+}
+
+.toggle-content {
+    display: none; /* 초기 상태에서 접혀 있음 */
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.toggle-content p {
+    margin: 0;
+}
+
+.family-container{
+    display: flex;
+    text-align: center;
+    justify-content: center; /* 수평 가운데 정렬 */
 }
