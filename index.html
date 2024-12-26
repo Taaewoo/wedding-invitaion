@@ -206,47 +206,36 @@
         </div>
 
         <div class="ww-section" id="donation">
-            <div class="container">
-                <div class="col text-center">
-                    <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">마음 전하실 곳</h2>
-                </div>
-                <div class="toggle-container">
-                    <button class="toggle-button" id="toggleButton1" onclick="toggleContent('toggleButton1', 'content1')">
-                      펼치기
-                      <span class="arrow">▼</span>
-                    </button>
-                    <div class="toggle-content" id="content1">
-                      <p>첫 번째 내용이 들어갑니다.</p>
+            <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">마음 전하실 곳</h2>
+            <div class="container folding">
+                <div class="pay-container mt-3 mb-3">
+                    <button class="collapsible" style="text-align: center;">신랑측에게</button>
+                    <div class="pay-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
-                
-                <div class="toggle-container">
-                    <button class="toggle-button" id="toggleButton2" onclick="toggleContent('toggleButton2', 'content2')">
-                      펼치기
-                      <span class="arrow">▼</span>
-                    </button>
-                    <div class="toggle-content" id="content2">
-                      <p>두 번째 내용이 들어갑니다.</p>
+                <div class="pay-container mt-3 mb-3">
+                    <button class="collapsible" style="text-align: center;">신부측에게</button>
+                    <div class="pay-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
             </div>
             <script>
-                function toggleContent(buttonId, contentId) {
-                    const content = document.getElementById(contentId);
-                    const button = document.getElementById(buttonId);
-                    const arrow = button.querySelector('.arrow');
-                    
-                    // 컨텐츠가 펼쳐졌는지 접혔는지 확인
-                    if (content.style.display === "none" || content.style.display === "") {
-                        content.style.display = "block";  // 펼치기
-                        arrow.style.transform = "rotate(180deg)";  // 화살표 방향 위로 변경
-                        button.innerHTML = '접기 <span class="arrow">▲</span>';
-                    } else {
-                        content.style.display = "none";  // 접기
-                        arrow.style.transform = "rotate(0deg)";  // 화살표 방향 아래로 변경
-                        button.innerHTML = '펼치기 <span class="arrow">▼</span>';
-                    }
-                    }
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                        content.style.maxHeight = null;
+                        } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                    });
+                }
             </script>
         </div>
 
