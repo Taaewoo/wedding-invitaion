@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 abbr[title],
@@ -10100,3 +10100,86 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
 }
 
+.message-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 수평 가운데 정렬 */
+    align-items: center;
+    
+}
+
+.message{
+    width: 90%;
+    padding: 1.5em 1.2em;
+    margin-bottom: 1em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+}
+
+.message-content{
+    line-height: 1.5;
+}
+
+.message-info{
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: rgb(122, 122, 122);
+}
+
+
+.message-pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.message-pagination .prev-btn,
+.message-pagination .next-btn,
+.message-pagination .page-button {
+  padding: 0.3em 0.5em;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #f8f9fa;  /* 기본 배경색 */
+  color: black;  /* 기본 텍스트 색 */
+  font-size: 16px;
+  border: none;  /* 기본 상태에서 테두리 제거 */
+  border-radius: 1em;  /* 약간 둥근 모서리 */
+}
+
+.message-pagination .prev-btn:disabled,
+.message-pagination .next-btn:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.message-pagination .page-button:hover,
+.message-pagination .page-button:focus {
+  background-color: #f0f0f0;  /* 호버 상태에서 배경색 변화 */
+  color: #007bff;
+}
+
+.message-pagination .page-button:active {
+  background-color: #007bff;  /* 클릭시 배경색 */
+  color: white;  /* 클릭시 텍스트 색 */
+  border: 2px solid #007bff;  /* 클릭시 테두리 색 */
+}
+
+.message-pagination .page-active {
+  background-color: #007bff;  /* 활성 페이지 배경색 */
+  color: white;  /* 활성 페이지 텍스트 색 */
+  font-weight: bold;  /* 강조된 텍스트 */
+}
+
+.message-pagination .page-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.message-pagination .page-numbers span {
+  margin-left: 10px;
+  font-size: 16px;
+}
