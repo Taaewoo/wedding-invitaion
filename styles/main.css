@@ -10070,7 +10070,7 @@ body {
     background-color: lightgoldenrodyellow;
 }
 
-    .collapsible:after {
+.collapsible:after {
     content: '\002B';
     color: black;
     font-weight: bold;
