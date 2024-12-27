@@ -274,6 +274,192 @@
                 </div>
             </div>
         </div>
+
+        <div class="ww-section bg-light" id="guestbook">
+            <div class="container">
+                <h2 class="h1 mt-3 text-center ww-title" style="font-family: 'Pretendard';">Message</h2>
+                <p class="mt-4 mb-4 fs-1 text-center" style="font-family: 'Pretendard'; line-height: 1.2;">
+                    신랑, 신부에게 따뜻한 방명록을 남겨주세요.
+                </p>
+                <div class="message-container">
+                    <div class="message">
+                        <div class="message-content">
+                            1 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            2 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            5 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            9 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="message-content">
+                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                        </div>
+                        <div class="message-info text-center mt-4">
+                            <p>From. 박태우</p>
+                            <p>2025.01.13 17:52</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pagination">
+                    <button id="prev-btn" onclick="changePage(-1)">Previous</button>
+                    <div id="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
+                    <button id="next-btn" onclick="changePage(1)">Next</button>
+                </div>
+            </div>
+            <script>
+                let currentPage = 1;
+                const messagesPerPage = 5;  // 한 페이지에 표시할 메시지 개수
+                const messages = document.querySelectorAll('.message');
+
+                function showPage(page) {
+                    // 전체 메시지들을 숨기고
+                    messages.forEach((message, index) => {
+                        message.style.display = 'none';
+                    });
+
+                    // 해당 페이지의 메시지들만 표시
+                    const start = (page - 1) * messagesPerPage;
+                    const end = page * messagesPerPage;
+                    for (let i = start; i < end; i++) {
+                        if (messages[i]) {
+                        messages[i].style.display = 'block';
+                        }
+                    }
+
+                    // 페이지 번호 버튼을 업데이트
+                    updatePaginationInfo();
+                }
+
+                function changePage(direction) {
+                    const totalPages = Math.ceil(messages.length / messagesPerPage);
+
+                    currentPage += direction;
+
+                    // 페이지 범위 체크
+                    if (currentPage < 1) currentPage = 1;
+                    if (currentPage > totalPages) currentPage = totalPages;
+
+                    // 페이지 표시 업데이트
+                    showPage(currentPage);
+                }
+
+                // 페이지 번호 버튼을 동적으로 생성하는 함수
+                function updatePaginationInfo() {
+                    const totalPages = Math.ceil(messages.length / messagesPerPage);
+                    const pageNumbersContainer = document.getElementById('page-numbers');
+                    
+                    // 이전 페이지와 다음 페이지 버튼 상태 업데이트
+                    document.getElementById('prev-btn').disabled = currentPage === 1;
+                    document.getElementById('next-btn').disabled = currentPage === totalPages;
+
+                    // 페이지 번호 버튼들을 동적으로 생성
+                    pageNumbersContainer.innerHTML = ''; // 이전 페이지 번호 버튼들 삭제
+                    for (let i = 1; i <= totalPages; i++) {
+                        const pageButton = document.createElement('button');
+                        pageButton.textContent = i;
+                        pageButton.classList.add('page-button');
+                        
+                        // 현재 페이지인 경우 스타일 변경
+                        if (i === currentPage) {
+                        pageButton.classList.add('page-active');
+                        }
+
+                        pageButton.onclick = function() {
+                        currentPage = i;
+                        showPage(currentPage);
+                        };
+
+                        pageNumbersContainer.appendChild(pageButton);
+                    }
+                }
+
+                // 초기 페이지 표시 및 페이지 번호 업데이트
+                showPage(currentPage);
+            </script>
+        </div>
+        
         <script>
             let observer = new IntersectionObserver((e)=>{
                 e.forEach((box)=>{
@@ -288,7 +474,7 @@
                 observer.observe(d)
             })
         </script>
-
+        
     </div>
 </div>
 </div>
