@@ -10106,6 +10106,7 @@ body {
     flex-direction: column;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center;
+    
 }
 
 .message{
@@ -10131,60 +10132,54 @@ body {
 }
 
 
+.message-pagination{
+    display: flex;
+    justify-content: center;
+}
 
-#pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  #pagination button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 50%;  /* 동그란 버튼 */
-    border: 2px solid #007bff;  /* 테두리 색 */
-    background-color: white;
-    color: #007bff;  /* 텍스트 색 */
-    font-size: 16px;
-    font-weight: bold;
-    transition: all 0.3s ease;  /* 호버 애니메이션 */
-  }
-  
-  #pagination button:disabled {
-    background-color: #ccc;
-    color: #666;
-    cursor: not-allowed;
-    border: 2px solid #ccc;
-  }
-  
-  .page-button {
-    width: 40px;  /* 버튼 크기 */
-    height: 40px;  /* 버튼 크기 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;  /* 동그란 모서리 */
-  }
-  
-  .page-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-  }
-  
-  .page-button.page-active {
-    background-color: #007bff;
-    color: white;
-    font-weight: bold;
-  }
-  
-  #page-numbers {
-    display: flex;
-    align-items: center;
-  }
-  
-  #page-numbers span {
-    margin-left: 10px;
-    font-size: 16px;
-  }
+.message-pagination .prev-btn,
+.message-pagination .next-btn,
+.message-pagination .page-button {
+  padding: 0.3em 0.5em;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #f8f9fa;  /* 기본 배경색 */
+  color: black;  /* 기본 텍스트 색 */
+  font-size: 16px;
+  border: none;  /* 기본 상태에서 테두리 제거 */
+  border-radius: 1em;  /* 약간 둥근 모서리 */
+}
+
+.message-pagination .prev-btn:disabled,
+.message-pagination .next-btn:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+.message-pagination .page-button:hover,
+.message-pagination .page-button:focus {
+  background-color: #f0f0f0;  /* 호버 상태에서 배경색 변화 */
+  color: #007bff;
+}
+
+.message-pagination .page-button:active {
+  background-color: #007bff;  /* 클릭시 배경색 */
+  color: white;  /* 클릭시 텍스트 색 */
+  border: 2px solid #007bff;  /* 클릭시 테두리 색 */
+}
+
+.message-pagination .page-active {
+  background-color: #007bff;  /* 활성 페이지 배경색 */
+  color: white;  /* 활성 페이지 텍스트 색 */
+  font-weight: bold;  /* 강조된 텍스트 */
+}
+
+.message-pagination .page-numbers {
+  display: flex;
+  align-items: center;
+}
+
+.message-pagination .page-numbers span {
+  margin-left: 10px;
+  font-size: 16px;
+}
