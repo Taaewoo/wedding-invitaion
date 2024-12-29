@@ -10183,3 +10183,28 @@ body {
   margin-left: 10px;
   font-size: 16px;
 }
+
+#timer {
+    font-size: 1.6em;
+    font-weight: 200;
+    color: black;
+    width: 100%;
+}
+
+#timer div {
+    display: inline-block;
+    width: 2.5em;
+    padding: 0.1em;  
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    margin: 0.3em;
+}
+
+#timer div span {
+    color: gray;
+    display: block;
+    margin-top: 0.1em;
+    font-size: 0.5em;
+    font-weight: 200;
+}

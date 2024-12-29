@@ -34,17 +34,17 @@
         </div>
         <script>
             // 최대 높이 계산 및 적용 함수
-            function setMaxHeight() {
-              // 기기의 최대 높이 구하기
-              var maxHeight = window.innerHeight || document.documentElement.clientHeight;
+            // function setMaxHeight() {
+            //   // 기기의 최대 높이 구하기
+            //   var maxHeight = window.innerHeight || document.documentElement.clientHeight;
         
-              // 해당 div에 최대 높이 적용
-              var container = document.querySelector('.ww-home-page');
-              container.style.height = maxHeight + 'px';
-            }
+            //   // 해당 div에 최대 높이 적용
+            //   var container = document.querySelector('.ww-home-page');
+            //   container.style.height = maxHeight + 'px';
+            // }
         
-            // 페이지가 로드되면 한 번 실행
-            window.onload = setMaxHeight;
+            // // 페이지가 로드되면 한 번 실행
+            // window.onload = setMaxHeight;
         </script>
         <div class="ww-section" id="couple">
             <div class="container text-center">
@@ -66,9 +66,39 @@
             </div>
         </div>
 
-        <div class="ww-section" id="couple">
+        <div class="ww-section bg-light" id="calendar">
             <div class="container text-center">
-                << 달력 이미지 >>
+                <div class="mb-6">
+                    -- 달력이미지 --
+                </div>
+                <div>
+                    <div class="mb-3" id="timer"></div>
+                </div>
+                <script>
+                    function updateTimer() {
+                        const future = Date.parse("2025/02/16 11:00:00");
+                        const now = new Date();
+                        const diff = future - now;
+
+                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor(diff / (1000 * 60 * 60));
+                        const mins = Math.floor(diff / (1000 * 60));
+                        const secs = Math.floor(diff / 1000);
+
+                        const d = days;
+                        const h = hours - days * 24;
+                        const m = mins - hours * 60;
+                        const s = secs - mins * 60;
+                        document.getElementById("timer")
+                        .innerHTML =
+                        '<div>' + d + '<span>Days</span></div>' +
+                        '<div>' + h + '<span>Hours</span></div>' +
+                        '<div>' + m + '<span>Minutes</span></div>' +
+                        '<div>' + s + '<span>Seconds</span></div>';
+                    }
+
+                    setInterval(updateTimer, 1000);
+                </script>
             </div>
         </div>
 
