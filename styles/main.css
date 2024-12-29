@@ -67,7 +67,7 @@ body {
     line-height: 1.5;
     color: #212529;
     text-align: left;
-    background-color: #FDFFFC;
+    background-color: #DCDCDC;
     display: flex;
     justify-content: center;
 }
@@ -80,7 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: white;
+    background-color: #fff9ee;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
   }
 
@@ -6418,7 +6418,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-    background-color: #f8f9fa !important;
+    background-color: white !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -9761,12 +9761,25 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: url("../images/img3_add.jpeg") no-repeat;
-    background-position: center center;
+    background: url("../images/main_photo.jpg") no-repeat;
+    background-position: top center;
     background-size: cover;
     width: 100%;
     height: 100vh;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-photo-text{
+    background: url("../images/main_photo_text.png") no-repeat;
+    background-position: top center;
+    background-size: contain;
+    margin-top: 1em;
+    width: 50%;
+    height: 30%;
+    opacity: 0;
+    transition: all 4s;
 }
 
 /* Nav Bar Style */
@@ -9942,20 +9955,58 @@ body {
     cursor: pointer;
 }
 
+@font-face {
+    font-family: "CocoSharp Trial";
+    src: url(../fonts/Coco-Sharp-Extrabold-trial.ttf);
+}
+
+@font-face {
+    font-family: "Galvji";
+    src: url(../fonts/Galvji.ttc);
+}
+
+@font-face {
+    font-family: "MaruBuri";
+    src: url(../fonts/MaruBuri-Regular.otf);
+}
+
+@font-face {
+    font-family: "MaruBuri Bold";
+    src: url(../fonts/MaruBuri-Bold.otf);
+}
+
+@font-face {
+    font-family: "NanumSquare Round";
+    src: url(../fonts/NanumSquareRoundOTFR.otf);
+}
+
+@font-face {
+    font-family: "NanumSquare Round Bold";
+    src: url(../fonts/NanumSquareRoundOTFB.otf);
+}
+
 /* Common Style */
 .ww-title {
-    font-family: "Great Vibes", cursive;
+    color: #907c60;
+    font-family: "MaruBuri Bold";
+}
+
+.ww-content {
+    font-family: "NanumSquare Round"
+}
+
+.ww-content-bold {
+    font-family: "NanumSquare Round Bold"
 }
 
 .ww-section {
-    margin: 4em 0;
-    padding: 10px 0;
+    padding: 4em 0;
     opacity: 0;
     transition: all 1.5s;
 }
 
 #gallery.ww-section {
-    padding: 10px 2%
+    padding: 4em 3%
 }
 
 .gallery-container{
@@ -10053,10 +10104,11 @@ body {
 }
 
 .collapsible {
-    background-color: lightgoldenrodyellow;
+    background-color: #fffefb;
     color: black;
     border-radius: 10px 10px 0 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     cursor: pointer;
     padding: 18px;
     width: 80%;
@@ -10067,7 +10119,8 @@ body {
 }
 
 .active, .collapsible:hover {
-    background-color: lightgoldenrodyellow;
+    background-color: #907c60;
+    color: white;
 }
 
 .collapsible:after {
@@ -10159,17 +10212,16 @@ body {
 .message-pagination .page-button:hover,
 .message-pagination .page-button:focus {
   background-color: #f0f0f0;  /* 호버 상태에서 배경색 변화 */
-  color: #007bff;
+  color: #907c60;
 }
 
 .message-pagination .page-button:active {
-  background-color: #007bff;  /* 클릭시 배경색 */
+  background-color: #907c60;  /* 클릭시 배경색 */
   color: white;  /* 클릭시 텍스트 색 */
-  border: 2px solid #007bff;  /* 클릭시 테두리 색 */
 }
 
 .message-pagination .page-active {
-  background-color: #007bff;  /* 활성 페이지 배경색 */
+  background-color: #907c60;  /* 활성 페이지 배경색 */
   color: white;  /* 활성 페이지 텍스트 색 */
   font-weight: bold;  /* 강조된 텍스트 */
 }
@@ -10189,15 +10241,17 @@ body {
     font-weight: 200;
     color: black;
     width: 100%;
+    font-family: "NanumSquareRound"
 }
 
 #timer div {
     display: inline-block;
     width: 2.5em;
     padding: 0.1em;  
-    background: white;
+    background: #fffcf7;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    border: 0.7px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     margin: 0.3em;
 }
 
@@ -10207,4 +10261,14 @@ body {
     margin-top: 0.1em;
     font-size: 0.5em;
     font-weight: 200;
+    font-family: "NanumSquareRound"
+}
+
+.loc-info-title{
+    margin-bottom: 1em;
+}
+
+.loc-info-title img{
+    width: 2em;
+    height: 2em;
 }

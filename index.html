@@ -29,47 +29,44 @@
 <div class="page-content">
     <div class="div">
         <div class="ww-home-page" id="home">
-            <div class="ww-wedding-announcement d-flex align-items-center justify-content-start">
-            </div>
+            <div class="main-photo-text"></div>
         </div>
         <script>
             // 최대 높이 계산 및 적용 함수
-            // function setMaxHeight() {
-            //   // 기기의 최대 높이 구하기
-            //   var maxHeight = window.innerHeight || document.documentElement.clientHeight;
+            function setMaxHeight() {
+              // 기기의 최대 높이 구하기
+              var maxHeight = window.innerHeight || document.documentElement.clientHeight;
         
-            //   // 해당 div에 최대 높이 적용
-            //   var container = document.querySelector('.ww-home-page');
-            //   container.style.height = maxHeight + 'px';
-            // }
+              // 해당 div에 최대 높이 적용
+              var container = document.querySelector('.ww-home-page');
+              container.style.height = maxHeight + 'px';
+            }
         
-            // // 페이지가 로드되면 한 번 실행
-            // window.onload = setMaxHeight;
+            // 페이지가 로드되면 한 번 실행
+            window.onload = setMaxHeight;
         </script>
         <div class="ww-section" id="couple">
             <div class="container text-center">
                 <div class="col-md-12">
-                    <p class="mt-5 mb-5 fs-4" style="font-family: 'Pretendard'; font-weight: bold">
-                        Taewoo & Ran
-                    </p>
-                    <p class="mt-6 mb-5 fs-3" style="font-family: 'Pretendard'; font-weight: bold;">
+                    <p class="mt-1 mb-5 fs-3 ww-content-bold" style="color: #907c60;">
                         저희 결혼합니다
                     </p>
-                    <p class="mt-6 fs-1" style="font-family: 'Pretendard'; line-height: 1.2;">
+                    <p class="mt-6 fs-1 ww-content" style="line-height: 1.2;">
                         7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
                         처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로 '평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br>가까이에서 축복해 주시면<br><br>감사하겠습니다.
                     </p>
-                    <p class="mt-5 mb-5 fs-2" style="font-family: 'Pretendard'; font-weight: bold;">
+                    <p class="mt-5 fs-2 ww-content-bold">
                         신랑 박태우 &nbsp · &nbsp 신부 최란
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="ww-section bg-light" id="calendar">
+        <div class="ww-section" id="calendar">
             <div class="container text-center">
-                <div class="mb-6">
-                    -- 달력이미지 --
+                <h2 class="h1 text-center mt-3 mb-4 ww-title">Wedding Day</h2>
+                <div class="calender mt-5 mb-4">
+                    <img src="images/calendar.png">
                 </div>
                 <div>
                     <div class="mb-3" id="timer"></div>
@@ -102,8 +99,8 @@
             </div>
         </div>
 
-        <div class="ww-section" id="gallery">
-            <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">Gallery</h2>
+        <div class="ww-section bg-light" id="gallery">
+            <h2 class="h1 text-center pb-3 ww-title">Gallery</h2>
             <!-- <div class="gallery-container"> -->
                 <div class="swiper-container gallery-top">
                     <div class="swiper-pagination"></div>
@@ -156,9 +153,9 @@
 
         <div class="ww-section" id="contact">
             <div class="container text-center">
-                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">축하 연락하기</h2>
+                <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">축하 연락하기</h2>
                 <div class="row fs-2">
-                    <div class="col-6 mr-4">
+                    <div class="col-6 mr-4 ww-content">
                         신랑 &nbsp&nbsp&nbsp 박태우
                     </div>
                     <a href="tel:010-4165-7696" class="contact-button">
@@ -170,7 +167,7 @@
                     </button>
                 </div>
                 <div class="row fs-2">
-                    <div class="col-6 mr-4">
+                    <div class="col-6 mr-4 ww-content">
                         신부 &nbsp&nbsp&nbsp 최&nbsp&nbsp&nbsp란
                     </div>
                     <a href="tel:010-2044-6024" class="contact-button">
@@ -182,9 +179,9 @@
                     </button>
                 </div>
                 <br/>
-                <div class="family-container">
+                <div class="family-container ww-content">
                     <div style="margin-top:1rem; margin-right: 1rem;">
-                        <span style="font-weight: bold;">신랑측 혼주</span>
+                        <span class="ww-content-bold">신랑측 혼주</span>
                         <div class="row">
                             <span>아버지</span>
                             &nbsp
@@ -211,7 +208,7 @@
                         </div>
                     </div>
                     <div style="margin-top:1rem; margin-left: 1rem;">
-                        <span style="font-weight: bold;">신부측 혼주</span>
+                        <span class="ww-content-bold">신부측 혼주</span>
                         <div class="row">
                             <span>아버지</span>
                             &nbsp
@@ -242,8 +239,8 @@
         </div>
 
         <div class="ww-section" id="donation">
-            <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">마음 전하실 곳</h2>
-            <div class="container folding">
+            <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">마음 전하실 곳</h2>
+            <div class="container folding ww-content">
                 <div class="pay-container mt-3 mb-3">
                     <button class="collapsible" style="text-align: center;">신랑측에게</button>
                     <div class="pay-content">
@@ -277,7 +274,13 @@
 
         <div class="ww-section" id="map">
             <div class="container">
-                <h2 class="h1 text-center pb-3 ww-title" style="font-family: 'Pretendard';">오시는 길</h2>
+                <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">오시는 길</h2>
+                <p class="text-center mt-2 mb-1 fs-1 ww-content-bold">
+                    합정 웨딩시그니처 트리니티홀
+                </p>
+                <p class="text-center mt-1 mb-3 ww-content">
+                    서울시 마포구 양화로 87 (서교동 378-7)
+                </p>
                 <!-- * 카카오맵 - 지도퍼가기 -->
                 <!-- 1. 지도 노드 -->
                 <div id="daumRoughmapContainer1734767297977" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
@@ -297,21 +300,73 @@
                         // "mapHeight" : "360"
                     }).render();
                 </script>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        << 달력 이미지 >>
+                <div class="loc-info ww-content">
+                    <div>
+                        -- 약도 이미지 --
+                    </div>
+                    <div>
+                        <div class="loc-info-type">
+                            <div class="row loc-info-title">
+                                <img src="images/subway.png">
+                                <div>지하철</div>
+                            </div>
+                            <div class="loc-info-content">
+                                합정역 - 2호선,6호선<br>
+                                합정역 하차 > 2번 출구 도보 4분<br><br>
+                                홍대입구역 - 2호선,공항철도,경의선<br>
+                                홍대입구역 하차 > 1번 출구 도보 11분<br>
+                                홍대입구역 하차 > 홍대입구역 버스 탑승 > 서교동 하차 > 도보 5분
+
+                            </div>
+                        </div>
+                        <div class="loc-info-type">
+                            <div class="row loc-info-title">
+                                <img src="images/bus.png">
+                                <div>버스</div>
+                            </div>
+                            <div class="loc-info-content">
+                                서교동 / 우리은행서교동지점 / 합정역 하차<br>
+                                파랑(간선)<br>
+                                271, 602, 603, 604, 761<br>
+                                초록(지선)<br>
+                                5712, 5714, 6712, 6716, 7612<br>
+                                빨강(광역)<br>
+                                1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
+                            </div>
+                        </div>
+                        <div class="loc-info-type">
+                            <div class="row loc-info-title">
+                                <img src="images/parking.png">
+                                <div>주차</div>
+                            </div>
+                            <div class="loc-info-content">
+                                서교동 / 우리은행서교동지점 / 합정역 하차<br>
+                                파랑(간선)<br>
+                                271, 602, 603, 604, 761<br>
+                                초록(지선)<br>
+                                5712, 5714, 6712, 6716, 7612<br>
+                                빨강(광역)<br>
+                                1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="ww-section" id="notice">
+            <div class="container">
+                <h2 class="h1 text-center pb-3 ww-title" style="color: #907c60;">Notice</h2>
+            </div>
+        </div>
+
         <div class="ww-section bg-light" id="guestbook">
             <div class="container">
-                <h2 class="h1 mt-3 text-center ww-title" style="font-family: 'Pretendard';">Message</h2>
-                <p class="mt-4 mb-4 fs-1 text-center" style="font-family: 'Pretendard'; line-height: 1.2;">
+                <h2 class="h1 mt-3 text-center ww-title">Message</h2>
+                <p class="mt-4 mb-4 fs-1 text-center ww-content">
                     신랑, 신부에게 따뜻한 방명록을 남겨주세요.
                 </p>
-                <div class="message-container">
+                <div class="message-container ww-content">
                     <div class="message">
                         <div class="message-content">
                             1 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
@@ -539,6 +594,10 @@
 
             let wwsection = document.querySelectorAll('.ww-section')
             wwsection.forEach((d)=>{
+                observer.observe(d)
+            })
+            let main_photo_text = document.querySelectorAll('.main-photo-text')
+            main_photo_text.forEach((d)=>{
                 observer.observe(d)
             })
         </script>
