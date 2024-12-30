@@ -111,16 +111,17 @@
                         <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                         <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                     </div>
-                </div>
-                <div class="swiper-container gallery-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/img1.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img2.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img3.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/img1.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img2.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img3.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                        </div>
                     </div>
                 </div>
+                
             <!-- </div> -->
 
             <!-- Link Swiper's CSS -->
@@ -132,6 +133,7 @@
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
                     pagination: '.swiper-pagination',
+                    paginationType: 'fraction',
                     spaceBetween: 10,
                     loop:true,
                     loopedSlides: 5, //looped slides should be the same     
@@ -244,7 +246,14 @@
                 <div class="pay-container mt-3 mb-3">
                     <button class="collapsible" style="text-align: center;">신랑측에게</button>
                     <div class="pay-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="pay-content-row">
+                            <div style="font-size: 1em;">토스뱅크 111123-123213-232<br>박태우</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy" style="letter-spacing:0.2em">복사</a>
+                                <a class="account-kakao-pay"></a>
+                            </div>
+                        </div>
+                        <div class="pay-content-row">asasdsadsadasd</div>
                     </div>
                 </div>
                 <div class="pay-container mt-3 mb-3">

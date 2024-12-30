@@ -9859,7 +9859,6 @@ body {
 
 .swiper-slide img{
     width: 100%;
-    border-radius : 30px;
     object-fit: contain;  /* 비율을 유지하며, div를 완전히 채움. 잘림 발생 가능 */
     object-position: center; /* 이미지의 중심을 기준으로 크기 맞추기 */
 }
@@ -10141,16 +10140,44 @@ body {
     text-align: center;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center;
+    width: 100%;
 }
 
 .pay-content {
-    padding: 0 18px;
     max-height: 0;
     width: 80%;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+}
+
+.pay-content-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.7px solid rgba(0, 0, 0, 0.1);
+    padding: 0.4em 1em;
+    text-align: left;
+    height: 90%;
+}
+
+.account-copy{
+    background-color: rgb(243,243,243);
+    padding: 0.3em 1.5em;
+    font-size: 0.9em;
+    font-family: "NanumSquare Round Bold"
+}
+
+.account-kakao-pay{
+    background-image: url(../images/kakaopay.png);
+    background-color: rgb(255,235,0);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    margin-top: 0.3em;
+    padding: 0.8em 0;
+    height: 1em;
 }
 
 .message-container{
