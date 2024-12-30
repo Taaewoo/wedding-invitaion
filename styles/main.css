@@ -10110,7 +10110,7 @@ body {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     cursor: pointer;
     padding: 18px;
-    width: 80%;
+    width: 90%;
     border: none;
     text-align: left;
     outline: none;
@@ -10145,7 +10145,7 @@ body {
 
 .pay-content {
     max-height: 0;
-    width: 80%;
+    width: 90%;
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     background-color: white;
@@ -10163,8 +10163,12 @@ body {
 }
 
 .account-copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(243,243,243);
-    padding: 0.3em 1.5em;
+    width: 4em;
+    height: 2em;
     font-size: 0.9em;
     font-family: "NanumSquare Round Bold"
 }
