@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
     <meta charset="UTF-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>태우 란의 청첩장</title>
-    <meta content="태우, 란의 청첩장" name="description"/>
+    <meta content="태우, 란의 청첩장" name="description" />
     <meta property="og:image" content="images/img1.png">
     <link href="images/favicon/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="images/favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -16,92 +17,90 @@
     <script src="scripts/swiper.min.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', 'G-QT9WZ23XT2');
     </script>
 </head>
 
 <body id="top">
-<div class="wrapper">
-<header></header>
-<div id="fb-root"></div>
-<div class="page-content">
-    <div class="div">
-        <div class="ww-home-page" id="home">
-            <div class="main-photo-text"></div>
-        </div>
-        <script>
-            // 최대 높이 계산 및 적용 함수
-            function setMaxHeight() {
-              // 기기의 최대 높이 구하기
-              var maxHeight = window.innerHeight || document.documentElement.clientHeight;
-        
-              // 해당 div에 최대 높이 적용
-              var container = document.querySelector('.ww-home-page');
-              container.style.height = maxHeight + 'px';
-            }
-        
-            // 페이지가 로드되면 한 번 실행
-            window.onload = setMaxHeight;
-        </script>
-        <div class="ww-section" id="couple">
-            <div class="container text-center">
-                <div class="col-md-12">
-                    <p class="mt-1 mb-5 fs-3 ww-content-bold" style="color: #907c60;">
-                        저희 결혼합니다
-                    </p>
-                    <p class="mt-6 fs-1 ww-content" style="line-height: 1.2;">
-                        7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
-                        처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로 '평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br>가까이에서 축복해 주시면<br><br>감사하겠습니다.
-                    </p>
-                    <p class="mt-5 fs-2 ww-content-bold">
-                        신랑 박태우 &nbsp · &nbsp 신부 최란
-                    </p>
+    <div class="wrapper">
+        <div class="page-content">
+            <div class="ww-home-page" id="home">
+                <div class="main-photo-text"></div>
+            </div>
+            <script>
+                // 최대 높이 계산 및 적용 함수
+                function setMaxHeight() {
+                    // 기기의 최대 높이 구하기
+                    var maxHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                    // 해당 div에 최대 높이 적용
+                    var container = document.querySelector('.ww-home-page');
+                    container.style.height = maxHeight + 'px';
+                }
+
+                // 페이지가 로드되면 한 번 실행
+                window.onload = setMaxHeight;
+            </script>
+            <div class="ww-section" id="couple">
+                <div class="container text-center">
+                    <div class="col-md-12">
+                        <p class="mt-1 mb-5 fs-3 ww-content-bold" style="color: #907c60;">
+                            저희 결혼합니다
+                        </p>
+                        <p class="mt-6 fs-1 ww-content" style="line-height: 1.2;">
+                            7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
+                            처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로 '평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br>가까이에서
+                            축복해 주시면<br><br>감사하겠습니다.
+                        </p>
+                        <p class="mt-5 fs-2 ww-content-bold">
+                            신랑 박태우 &nbsp · &nbsp 신부 최란
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="ww-section" id="calendar">
-            <div class="container text-center">
-                <h2 class="h1 text-center mt-3 mb-4 ww-title">Wedding Day</h2>
-                <div class="calender mt-5 mb-4">
-                    <img src="images/calendar.png">
+            <div class="ww-section" id="calendar">
+                <div class="container text-center">
+                    <h2 class="h1 text-center mt-3 mb-4 ww-title">Wedding Day</h2>
+                    <div class="calender mt-5 mb-4">
+                        <img src="images/calendar.png">
+                    </div>
+                    <div>
+                        <div class="mb-3" id="timer"></div>
+                    </div>
+                    <script>
+                        function updateTimer() {
+                            const future = Date.parse("2025/02/16 11:00:00");
+                            const now = new Date();
+                            const diff = future - now;
+
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor(diff / (1000 * 60 * 60));
+                            const mins = Math.floor(diff / (1000 * 60));
+                            const secs = Math.floor(diff / 1000);
+
+                            const d = days;
+                            const h = hours - days * 24;
+                            const m = mins - hours * 60;
+                            const s = secs - mins * 60;
+                            document.getElementById("timer")
+                                .innerHTML =
+                                '<div>' + d + '<span>Days</span></div>' +
+                                '<div>' + h + '<span>Hours</span></div>' +
+                                '<div>' + m + '<span>Minutes</span></div>' +
+                                '<div>' + s + '<span>Seconds</span></div>';
+                        }
+
+                        setInterval(updateTimer, 1000);
+                    </script>
                 </div>
-                <div>
-                    <div class="mb-3" id="timer"></div>
-                </div>
-                <script>
-                    function updateTimer() {
-                        const future = Date.parse("2025/02/16 11:00:00");
-                        const now = new Date();
-                        const diff = future - now;
-
-                        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                        const hours = Math.floor(diff / (1000 * 60 * 60));
-                        const mins = Math.floor(diff / (1000 * 60));
-                        const secs = Math.floor(diff / 1000);
-
-                        const d = days;
-                        const h = hours - days * 24;
-                        const m = mins - hours * 60;
-                        const s = secs - mins * 60;
-                        document.getElementById("timer")
-                        .innerHTML =
-                        '<div>' + d + '<span>Days</span></div>' +
-                        '<div>' + h + '<span>Hours</span></div>' +
-                        '<div>' + m + '<span>Minutes</span></div>' +
-                        '<div>' + s + '<span>Seconds</span></div>';
-                    }
-
-                    setInterval(updateTimer, 1000);
-                </script>
             </div>
-        </div>
 
-        <div class="ww-section bg-light" id="gallery">
-            <h2 class="h1 text-center pb-3 ww-title">Gallery</h2>
-            <!-- <div class="gallery-container"> -->
+            <div class="ww-section bg-light" id="gallery">
+                <h2 class="h1 text-center pb-3 ww-title">Gallery</h2>
+                <!-- <div class="gallery-container"> -->
                 <div class="swiper-container gallery-top">
                     <div class="swiper-pagination"></div>
                     <div class="swiper-wrapper">
@@ -121,567 +120,578 @@
                         </div>
                     </div>
                 </div>
-                
-            <!-- </div> -->
 
-            <!-- Link Swiper's CSS -->
-            <link rel="stylesheet" href="styles/swiper.css">
-        
-            <!-- Initialize Swiper -->
-            <script>
-                var galleryTop = new Swiper('.gallery-top', {
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
-                    pagination: '.swiper-pagination',
-                    paginationType: 'fraction',
-                    spaceBetween: 10,
-                    loop:true,
-                    loopedSlides: 5, //looped slides should be the same     
-                    effect: 'fade',
-                });
-                var galleryThumbs = new Swiper('.gallery-thumbs', {
-                    spaceBetween: 10,
-                    slidesPerView: 5,
-                    touchRatio: 0.2,
-                    loop:true,
-                    loopedSlides: 5, //looped slides should be the same
-                    slideToClickedSlide: true
-                });
-                galleryTop.params.control = galleryThumbs;
-                galleryThumbs.params.control = galleryTop;
+                <!-- </div> -->
 
-            </script>
-        </div>
+                <!-- Link Swiper's CSS -->
+                <link rel="stylesheet" href="styles/swiper.css">
 
-        <div class="ww-section" id="contact">
-            <div class="container text-center">
-                <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">축하 연락하기</h2>
-                <div class="row fs-2">
-                    <div class="col-6 mr-4 ww-content">
-                        신랑 &nbsp&nbsp&nbsp 박태우
-                    </div>
-                    <a href="tel:010-4165-7696" class="contact-button">
-                        <img src="images/call.png" alt="전화 걸기">
-                    </a>
-                    <a href="sms:010-4165-7696" class="contact-button">
-                        <img src="images/message.png" alt="전화 걸기">
-                    </a>
-                    </button>
-                </div>
-                <div class="row fs-2">
-                    <div class="col-6 mr-4 ww-content">
-                        신부 &nbsp&nbsp&nbsp 최&nbsp&nbsp&nbsp란
-                    </div>
-                    <a href="tel:010-2044-6024" class="contact-button">
-                        <img src="images/call.png" alt="전화 걸기">
-                    </a>
-                    <a href="sms:010-2044-6024" class="contact-button">
-                        <img src="images/message.png" alt="전화 걸기">
-                    </a>
-                    </button>
-                </div>
-                <br/>
-                <div class="family-container ww-content">
-                    <div style="margin-top:1rem; margin-right: 1rem;">
-                        <span class="ww-content-bold">신랑측 혼주</span>
-                        <div class="row">
-                            <span>아버지</span>
-                            &nbsp
-                            <span>박찬용</span>
-                            &nbsp
-                            <a href="tel:010-3753-6696" class="family-contact-button">
-                                <img src="images/call.png" alt="전화 걸기">
-                            </a>
-                            <a href="sms:010-3753-6696" class="family-contact-button">
-                                <img src="images/message.png" alt="전화 걸기">
-                            </a>
-                        </div>
-                        <div class="row">
-                            <span>어머니</span>
-                            &nbsp
-                            <span>이진숙</span>
-                            &nbsp
-                            <a href="tel:010-7303-1350" class="family-contact-button">
-                                <img src="images/call.png" alt="전화 걸기">
-                            </a>
-                            <a href="sms:010-7303-1350" class="family-contact-button">
-                                <img src="images/message.png" alt="전화 걸기">
-                            </a>
-                        </div>
-                    </div>
-                    <div style="margin-top:1rem; margin-left: 1rem;">
-                        <span class="ww-content-bold">신부측 혼주</span>
-                        <div class="row">
-                            <span>아버지</span>
-                            &nbsp
-                            <span>최성모</span>
-                            &nbsp
-                            <a href="tel:010-2044-6024" class="family-contact-button">
-                                <img src="images/call.png" alt="전화 걸기">
-                            </a>
-                            <a href="sms:010-2044-6024" class="family-contact-button">
-                                <img src="images/message.png" alt="전화 걸기">
-                            </a>
-                        </div>
-                        <div class="row">
-                            <span>어머니</span>
-                            &nbsp
-                            <span>조병순</span>
-                            &nbsp
-                            <a href="tel:010-4639-4927" class="family-contact-button">
-                                <img src="images/call.png" alt="전화 걸기">
-                            </a>
-                            <a href="sms:010-8029-7312" class="family-contact-button">
-                                <img src="images/message.png" alt="전화 걸기">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ww-section" id="donation">
-            <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">마음 전하실 곳</h2>
-            <div class="container folding ww-content">
-                <div class="pay-container mt-3 mb-3">
-                    <button class="collapsible" style="text-align: center;">신랑측에게</button>
-                    <div class="pay-content">
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박태우</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
-                                <a class="account-kakao-pay"></a>
-                            </div>
-                        </div>
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박찬용</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
-                            </div>
-                        </div>
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>이진숙</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pay-container mt-3 mb-3">
-                    <button class="collapsible" style="text-align: center;">신부측에게</button>
-                    <div class="pay-content">
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">토스뱅크 1000-4076-8089<br>최 란</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-4076-8089')" style="letter-spacing:0.2em">복사</a>
-                                <a class="account-kakao-pay"></a>
-                            </div>
-                        </div>
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">국민 035802-04-506904<br>최성모</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('035802-04-506904')" style="letter-spacing:0.2em">복사</a>
-                            </div>
-                        </div>
-                        <div class="pay-content-row">
-                            <div style="font-size: 0.9em;">토스뱅크 1000-3931-7134<br>조병순</div>
-                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
-                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-3931-7134')" style="letter-spacing:0.2em">복사</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <script>
-                var coll = document.getElementsByClassName("collapsible");
-                var i;
-
-                for (i = 0; i < coll.length; i++) {
-                    coll[i].addEventListener("click", function() {
-                        this.classList.toggle("active");
-                        var content = this.nextElementSibling;
-                        if (content.style.maxHeight){
-                        content.style.maxHeight = null;
-                        } else {
-                        content.style.maxHeight = content.scrollHeight + "px";
-                        } 
+                <!-- Initialize Swiper -->
+                <script>
+                    var galleryTop = new Swiper('.gallery-top', {
+                        nextButton: '.swiper-button-next',
+                        prevButton: '.swiper-button-prev',
+                        pagination: '.swiper-pagination',
+                        paginationType: 'fraction',
+                        spaceBetween: 10,
+                        loop: true,
+                        loopedSlides: 5, //looped slides should be the same     
+                        effect: 'fade',
                     });
-                }
+                    var galleryThumbs = new Swiper('.gallery-thumbs', {
+                        spaceBetween: 10,
+                        slidesPerView: 5,
+                        touchRatio: 0.2,
+                        loop: true,
+                        loopedSlides: 5, //looped slides should be the same
+                        slideToClickedSlide: true
+                    });
+                    galleryTop.params.control = galleryThumbs;
+                    galleryThumbs.params.control = galleryTop;
 
-                function account_copy(text) {
-                    navigator.clipboard.writeText(text)
-                }
-               
-            </script>
-        </div>
+                </script>
+            </div>
 
-        <div class="ww-section" id="map">
-            <div class="container">
-                <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">오시는 길</h2>
-                <p class="text-center mt-2 mb-1 fs-1 ww-content-bold">
-                    합정 웨딩시그니처 트리니티홀
-                </p>
-                <p class="text-center mt-1 mb-3 ww-content">
-                    서울시 마포구 양화로 87 (서교동 378-7)
-                </p>
-                <!-- * 카카오맵 - 지도퍼가기 -->
-                <!-- 1. 지도 노드 -->
-                <div id="daumRoughmapContainer1734767297977" class="root_daum_roughmap root_daum_roughmap_landing" style="width: 100%;"></div>
+            <div class="ww-section" id="contact">
+                <div class="container text-center">
+                    <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">축하 연락하기</h2>
+                    <div class="row fs-2">
+                        <div class="col-6 mr-4 ww-content">
+                            신랑 &nbsp&nbsp&nbsp 박태우
+                        </div>
+                        <a href="tel:010-4165-7696" class="contact-button">
+                            <img src="images/call.png" alt="전화 걸기">
+                        </a>
+                        <a href="sms:010-4165-7696" class="contact-button">
+                            <img src="images/message.png" alt="전화 걸기">
+                        </a>
+                        </button>
+                    </div>
+                    <div class="row fs-2">
+                        <div class="col-6 mr-4 ww-content">
+                            신부 &nbsp&nbsp&nbsp 최&nbsp&nbsp&nbsp란
+                        </div>
+                        <a href="tel:010-2044-6024" class="contact-button">
+                            <img src="images/call.png" alt="전화 걸기">
+                        </a>
+                        <a href="sms:010-2044-6024" class="contact-button">
+                            <img src="images/message.png" alt="전화 걸기">
+                        </a>
+                        </button>
+                    </div>
+                    <br />
+                    <div class="family-container ww-content">
+                        <div style="margin-top:1rem; margin-right: 1rem;">
+                            <span class="ww-content-bold">신랑측 혼주</span>
+                            <div class="row">
+                                <span>아버지</span>
+                                &nbsp
+                                <span>박찬용</span>
+                                &nbsp
+                                <a href="tel:010-3753-6696" class="family-contact-button">
+                                    <img src="images/call.png" alt="전화 걸기">
+                                </a>
+                                <a href="sms:010-3753-6696" class="family-contact-button">
+                                    <img src="images/message.png" alt="전화 걸기">
+                                </a>
+                            </div>
+                            <div class="row">
+                                <span>어머니</span>
+                                &nbsp
+                                <span>이진숙</span>
+                                &nbsp
+                                <a href="tel:010-7303-1350" class="family-contact-button">
+                                    <img src="images/call.png" alt="전화 걸기">
+                                </a>
+                                <a href="sms:010-7303-1350" class="family-contact-button">
+                                    <img src="images/message.png" alt="전화 걸기">
+                                </a>
+                            </div>
+                        </div>
+                        <div style="margin-top:1rem; margin-left: 1rem;">
+                            <span class="ww-content-bold">신부측 혼주</span>
+                            <div class="row">
+                                <span>아버지</span>
+                                &nbsp
+                                <span>최성모</span>
+                                &nbsp
+                                <a href="tel:010-2044-6024" class="family-contact-button">
+                                    <img src="images/call.png" alt="전화 걸기">
+                                </a>
+                                <a href="sms:010-2044-6024" class="family-contact-button">
+                                    <img src="images/message.png" alt="전화 걸기">
+                                </a>
+                            </div>
+                            <div class="row">
+                                <span>어머니</span>
+                                &nbsp
+                                <span>조병순</span>
+                                &nbsp
+                                <a href="tel:010-4639-4927" class="family-contact-button">
+                                    <img src="images/call.png" alt="전화 걸기">
+                                </a>
+                                <a href="sms:010-8029-7312" class="family-contact-button">
+                                    <img src="images/message.png" alt="전화 걸기">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                <!--
+            <div class="ww-section" id="donation">
+                <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">마음 전하실 곳</h2>
+                <div class="container folding ww-content">
+                    <div class="pay-container mt-3 mb-3">
+                        <button class="collapsible" style="text-align: center;">신랑측에게</button>
+                        <div class="pay-content">
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박태우</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('1000-2276-9953')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                    <a class="account-kakao-pay"></a>
+                                </div>
+                            </div>
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박찬용</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('1000-2276-9953')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                </div>
+                            </div>
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>이진숙</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('1000-2276-9953')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pay-container mt-3 mb-3">
+                        <button class="collapsible" style="text-align: center;">신부측에게</button>
+                        <div class="pay-content">
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">토스뱅크 1000-4076-8089<br>최 란</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('1000-4076-8089')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                    <a class="account-kakao-pay"></a>
+                                </div>
+                            </div>
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">국민 035802-04-506904<br>최성모</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('035802-04-506904')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                </div>
+                            </div>
+                            <div class="pay-content-row">
+                                <div style="font-size: 0.9em;">토스뱅크 1000-3931-7134<br>조병순</div>
+                                <div
+                                    style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                    <a class="account-copy open-popup-btn text-center"
+                                        href="javascript:account_copy('1000-3931-7134')"
+                                        style="letter-spacing:0.2em">복사</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+
+                    for (i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function () {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.maxHeight) {
+                                content.style.maxHeight = null;
+                            } else {
+                                content.style.maxHeight = content.scrollHeight + "px";
+                            }
+                        });
+                    }
+
+                    function account_copy(text) {
+                        navigator.clipboard.writeText(text)
+                    }
+
+                </script>
+            </div>
+
+            <div class="ww-section" id="map">
+                <div class="container">
+                    <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">오시는 길</h2>
+                    <p class="text-center mt-2 mb-1 fs-1 ww-content-bold">
+                        합정 웨딩시그니처 트리니티홀
+                    </p>
+                    <p class="text-center mt-1 mb-3 ww-content">
+                        서울시 마포구 양화로 87 (서교동 378-7)
+                    </p>
+                    <!-- * 카카오맵 - 지도퍼가기 -->
+                    <!-- 1. 지도 노드 -->
+                    <div id="daumRoughmapContainer1734767297977" class="root_daum_roughmap root_daum_roughmap_landing"
+                        style="width: 100%;"></div>
+
+                    <!--
                     2. 설치 스크립트
                     * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
                 -->
-                <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+                    <script charset="UTF-8" class="daum_roughmap_loader_script"
+                        src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
 
-                <!-- 3. 실행 스크립트 -->
-                <script charset="UTF-8">
-                    new daum.roughmap.Lander({
-                        "timestamp" : "1734767297977",
-                        "key" : "2mk9q",
-                        "mapWidth" : "100%",
-                        // "mapHeight" : "360"
-                    }).render();
+                    <!-- 3. 실행 스크립트 -->
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp": "1734767297977",
+                            "key": "2mk9q",
+                            "mapWidth": "100%",
+                            // "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <div class="loc-info ww-content">
+                        <div>
+                            -- 약도 이미지 --
+                        </div>
+                        <div>
+                            <div class="loc-info-type">
+                                <div class="row loc-info-title">
+                                    <img src="images/subway.png">
+                                    <div>지하철</div>
+                                </div>
+                                <div class="loc-info-content">
+                                    합정역 - 2호선,6호선<br>
+                                    합정역 하차 > 2번 출구 도보 4분<br><br>
+                                    홍대입구역 - 2호선,공항철도,경의선<br>
+                                    홍대입구역 하차 > 1번 출구 도보 11분<br>
+                                    홍대입구역 하차 > 홍대입구역 버스 탑승 > 서교동 하차 > 도보 5분
+
+                                </div>
+                            </div>
+                            <div class="loc-info-type">
+                                <div class="row loc-info-title">
+                                    <img src="images/bus.png">
+                                    <div>버스</div>
+                                </div>
+                                <div class="loc-info-content">
+                                    서교동 / 우리은행서교동지점 / 합정역 하차<br>
+                                    파랑(간선)<br>
+                                    271, 602, 603, 604, 761<br>
+                                    초록(지선)<br>
+                                    5712, 5714, 6712, 6716, 7612<br>
+                                    빨강(광역)<br>
+                                    1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
+                                </div>
+                            </div>
+                            <div class="loc-info-type">
+                                <div class="row loc-info-title">
+                                    <img src="images/parking.png">
+                                    <div>주차</div>
+                                </div>
+                                <div class="loc-info-content">
+                                    서교동 / 우리은행서교동지점 / 합정역 하차<br>
+                                    파랑(간선)<br>
+                                    271, 602, 603, 604, 761<br>
+                                    초록(지선)<br>
+                                    5712, 5714, 6712, 6716, 7612<br>
+                                    빨강(광역)<br>
+                                    1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ww-section" id="notice">
+                <div class="container">
+                    <h2 class="h1 text-center pb-3 ww-title" style="color: #907c60;">Notice</h2>
+                </div>
+            </div>
+
+            <div class="ww-section bg-light" id="guestbook">
+                <div class="container">
+                    <h2 class="h1 mt-3 text-center ww-title">Message</h2>
+                    <p class="mt-4 mb-4 fs-1 text-center ww-content">
+                        신랑, 신부에게 따뜻한 방명록을 남겨주세요.
+                    </p>
+                    <div class="message-container ww-content">
+                        <div class="message">
+                            <div class="message-content">
+                                1 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                2 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                5 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                9 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                        <div class="message">
+                            <div class="message-content">
+                                안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
+                            </div>
+                            <div class="message-info text-center mt-4">
+                                <p>From. 박태우</p>
+                                <p>2025.01.13 17:52</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="message-pagination">
+                        <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"> << </button>
+                        <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
+                        <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)">>></button>
+                    </div>
+                </div>
+                <script>
+                    let currentPage = 1;
+                    const messagesPerPage = 4;  // 한 페이지에 표시할 메시지 개수
+                    const messages = document.querySelectorAll('.message');
+
+                    // 여러 개의 페이지네이션 처리 함수
+                    function showPage(page, paginationElement) {
+                        const messagesPerPage = 4;
+                        const messages = document.querySelectorAll('.message');
+
+                        // 전체 메시지들을 숨기고
+                        messages.forEach((message, index) => {
+                            message.style.display = 'none';
+                        });
+
+                        // 해당 페이지의 메시지들만 표시
+                        const start = (page - 1) * messagesPerPage;
+                        const end = page * messagesPerPage;
+                        for (let i = start; i < end; i++) {
+                            if (messages[i]) {
+                                messages[i].style.display = 'block';
+                            }
+                        }
+
+                        // 페이지 번호 버튼을 업데이트
+                        updatePaginationInfo(paginationElement);
+                    }
+
+                    function changePage(direction, paginationElement) {
+                        const totalPages = Math.ceil(messages.length / messagesPerPage);
+
+                        currentPage += direction;
+
+                        // 페이지 범위 체크
+                        if (currentPage < 1) currentPage = 1;
+                        if (currentPage > totalPages) currentPage = totalPages;
+
+                        // 페이지 표시 업데이트
+                        showPage(currentPage, paginationElement);
+                    }
+
+                    // 페이지 번호 버튼을 동적으로 생성하는 함수
+                    function updatePaginationInfo(paginationElement) {
+                        const totalPages = Math.ceil(messages.length / messagesPerPage);
+                        const pageNumbersContainer = paginationElement.querySelector('.page-numbers');
+
+                        // 이전 페이지와 다음 페이지 버튼 상태 업데이트
+                        const prevBtn = paginationElement.querySelector('.prev-btn');
+                        const nextBtn = paginationElement.querySelector('.next-btn');
+                        prevBtn.disabled = currentPage === 1;
+                        nextBtn.disabled = currentPage === totalPages;
+
+                        // 페이지 번호 버튼들을 동적으로 생성
+                        pageNumbersContainer.innerHTML = ''; // 이전 페이지 번호 버튼들 삭제
+
+                        // 이전 2개 페이지, 현재 페이지, 다음 2개 페이지 번호 계산
+                        const pageNumbers = [];
+
+                        if (currentPage > 3) pageNumbers.push(1); // 첫 페이지
+                        if (currentPage > 4) pageNumbers.push('...'); // '...' 버튼
+
+                        for (let i = currentPage - 2; i <= currentPage + 2; i++) {
+                            if (i >= 1 && i <= totalPages) {
+                                pageNumbers.push(i);
+                            }
+                        }
+
+                        if (currentPage < totalPages - 3) pageNumbers.push('...'); // '...' 버튼
+                        if (currentPage < totalPages - 2) pageNumbers.push(totalPages); // 마지막 페이지
+
+                        // 페이지 번호 버튼 생성
+                        pageNumbers.forEach(page => {
+                            const pageButton = document.createElement('div');
+                            pageButton.classList.add('page-button');
+
+                            if (page === '...') {
+                                pageButton.textContent = '...';
+                                pageButton.disabled = true; // 비활성화된 '...' 버튼
+                            } else {
+                                pageButton.textContent = page;
+
+                                // 현재 페이지인 경우 스타일 변경
+                                if (page === currentPage) {
+                                    pageButton.classList.add('page-active');  // 'page-active' 클래스를 추가
+                                }
+
+                                pageButton.onclick = function () {
+                                    currentPage = page;
+                                    showPage(currentPage, paginationElement);
+                                };
+                            }
+
+                            pageNumbersContainer.appendChild(pageButton);
+                        });
+                    }
+
+                    // 모든 .message-pagination 요소에 대해 페이지네이션 초기화
+                    document.querySelectorAll('.message-pagination').forEach(paginationElement => {
+                        showPage(currentPage, paginationElement);
+                        paginationElement.querySelector('.prev-btn').onclick = function () {
+                            changePage(-1, paginationElement);
+                        };
+                        paginationElement.querySelector('.next-btn').onclick = function () {
+                            changePage(1, paginationElement);
+                        };
+                    });
+
                 </script>
-                <div class="loc-info ww-content">
-                    <div>
-                        -- 약도 이미지 --
-                    </div>
-                    <div>
-                        <div class="loc-info-type">
-                            <div class="row loc-info-title">
-                                <img src="images/subway.png">
-                                <div>지하철</div>
-                            </div>
-                            <div class="loc-info-content">
-                                합정역 - 2호선,6호선<br>
-                                합정역 하차 > 2번 출구 도보 4분<br><br>
-                                홍대입구역 - 2호선,공항철도,경의선<br>
-                                홍대입구역 하차 > 1번 출구 도보 11분<br>
-                                홍대입구역 하차 > 홍대입구역 버스 탑승 > 서교동 하차 > 도보 5분
-
-                            </div>
-                        </div>
-                        <div class="loc-info-type">
-                            <div class="row loc-info-title">
-                                <img src="images/bus.png">
-                                <div>버스</div>
-                            </div>
-                            <div class="loc-info-content">
-                                서교동 / 우리은행서교동지점 / 합정역 하차<br>
-                                파랑(간선)<br>
-                                271, 602, 603, 604, 761<br>
-                                초록(지선)<br>
-                                5712, 5714, 6712, 6716, 7612<br>
-                                빨강(광역)<br>
-                                1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
-                            </div>
-                        </div>
-                        <div class="loc-info-type">
-                            <div class="row loc-info-title">
-                                <img src="images/parking.png">
-                                <div>주차</div>
-                            </div>
-                            <div class="loc-info-content">
-                                서교동 / 우리은행서교동지점 / 합정역 하차<br>
-                                파랑(간선)<br>
-                                271, 602, 603, 604, 761<br>
-                                초록(지선)<br>
-                                5712, 5714, 6712, 6716, 7612<br>
-                                빨강(광역)<br>
-                                1000, 1100, 1101, 1200, 1300, 1301, 1400, 1500, 1601, 3100
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </div>
 
-        <div class="ww-section" id="notice">
-            <div class="container">
-                <h2 class="h1 text-center pb-3 ww-title" style="color: #907c60;">Notice</h2>
-            </div>
-        </div>
+            <script>
+                let observer = new IntersectionObserver((e) => {
+                    e.forEach((box) => {
+                        if (box.isIntersecting) {
+                            box.target.style.opacity = 1;
+                        }
+                    })
+                }, { threshold: 0.2 })
 
-        <div class="ww-section bg-light" id="guestbook">
-            <div class="container">
-                <h2 class="h1 mt-3 text-center ww-title">Message</h2>
-                <p class="mt-4 mb-4 fs-1 text-center ww-content">
-                    신랑, 신부에게 따뜻한 방명록을 남겨주세요.
-                </p>
-                <div class="message-container ww-content">
-                    <div class="message">
-                        <div class="message-content">
-                            1 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            2 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            5 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            9 안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
-                    <div class="message">
-                        <div class="message-content">
-                            안녕하세요 축하드립니다.<br>행복하게 결혼 생활하세요~!
-                        </div>
-                        <div class="message-info text-center mt-4">
-                            <p>From. 박태우</p>
-                            <p>2025.01.13 17:52</p>
-                        </div>
-                    </div>
+                let wwsection = document.querySelectorAll('.ww-section')
+                wwsection.forEach((d) => {
+                    observer.observe(d)
+                })
+                let main_photo_text = document.querySelectorAll('.main-photo-text')
+                main_photo_text.forEach((d) => {
+                    observer.observe(d)
+                })
+            </script>
+            <div class="popup-container">
+                <div class="copy-popup">
+                    <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
                 </div>
-                <div class="message-pagination">
-                    <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"><<</button>
-                    <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
-                    <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)">>></button>
-                  </div>
             </div>
             <script>
-                let currentPage = 1;
-                const messagesPerPage = 4;  // 한 페이지에 표시할 메시지 개수
-                const messages = document.querySelectorAll('.message');
+                const openBtn = document.querySelectorAll(".open-popup-btn");
+                const popup = document.querySelector(".copy-popup");
 
-                // 여러 개의 페이지네이션 처리 함수
-                function showPage(page, paginationElement) {
-                const messagesPerPage = 4;
-                const messages = document.querySelectorAll('.message');
-                
-                // 전체 메시지들을 숨기고
-                messages.forEach((message, index) => {
-                    message.style.display = 'none';
-                });
+                console.log(popup)
 
-                // 해당 페이지의 메시지들만 표시
-                const start = (page - 1) * messagesPerPage;
-                const end = page * messagesPerPage;
-                for (let i = start; i < end; i++) {
-                    if (messages[i]) {
-                    messages[i].style.display = 'block';
-                    }
+                for (i = 0; i < openBtn.length; i++) {
+                    openBtn[i].addEventListener("click", function () {
+                        // popup.classList.toggle('visible')
+                        if (!popup.classList.contains("visible")) {
+                            popup.classList.remove("disappear");
+                            popup.classList.add("visible");
+                            setTimeout(function() {
+                                popup.classList.add("disappear");
+                                popup.classList.remove("visible");
+                            }, 2000);
+                        }
+                    });
                 }
-
-                // 페이지 번호 버튼을 업데이트
-                updatePaginationInfo(paginationElement);
-                }
-
-                function changePage(direction, paginationElement) {
-                const totalPages = Math.ceil(messages.length / messagesPerPage);
-
-                currentPage += direction;
-
-                // 페이지 범위 체크
-                if (currentPage < 1) currentPage = 1;
-                if (currentPage > totalPages) currentPage = totalPages;
-
-                // 페이지 표시 업데이트
-                showPage(currentPage, paginationElement);
-                }
-
-                // 페이지 번호 버튼을 동적으로 생성하는 함수
-                function updatePaginationInfo(paginationElement) {
-                const totalPages = Math.ceil(messages.length / messagesPerPage);
-                const pageNumbersContainer = paginationElement.querySelector('.page-numbers');
-                
-                // 이전 페이지와 다음 페이지 버튼 상태 업데이트
-                const prevBtn = paginationElement.querySelector('.prev-btn');
-                const nextBtn = paginationElement.querySelector('.next-btn');
-                prevBtn.disabled = currentPage === 1;
-                nextBtn.disabled = currentPage === totalPages;
-
-                // 페이지 번호 버튼들을 동적으로 생성
-                pageNumbersContainer.innerHTML = ''; // 이전 페이지 번호 버튼들 삭제
-
-                // 이전 2개 페이지, 현재 페이지, 다음 2개 페이지 번호 계산
-                const pageNumbers = [];
-
-                if (currentPage > 3) pageNumbers.push(1); // 첫 페이지
-                if (currentPage > 4) pageNumbers.push('...'); // '...' 버튼
-
-                for (let i = currentPage - 2; i <= currentPage + 2; i++) {
-                    if (i >= 1 && i <= totalPages) {
-                    pageNumbers.push(i);
-                    }
-                }
-
-                if (currentPage < totalPages - 3) pageNumbers.push('...'); // '...' 버튼
-                if (currentPage < totalPages - 2) pageNumbers.push(totalPages); // 마지막 페이지
-
-                // 페이지 번호 버튼 생성
-                pageNumbers.forEach(page => {
-                    const pageButton = document.createElement('div');
-                    pageButton.classList.add('page-button');
-                    
-                    if (page === '...') {
-                    pageButton.textContent = '...';
-                    pageButton.disabled = true; // 비활성화된 '...' 버튼
-                    } else {
-                    pageButton.textContent = page;
-                    
-                    // 현재 페이지인 경우 스타일 변경
-                    if (page === currentPage) {
-                        pageButton.classList.add('page-active');  // 'page-active' 클래스를 추가
-                    }
-
-                    pageButton.onclick = function() {
-                        currentPage = page;
-                        showPage(currentPage, paginationElement);
-                    };
-                    }
-
-                    pageNumbersContainer.appendChild(pageButton);
-                });
-                }
-
-                // 모든 .message-pagination 요소에 대해 페이지네이션 초기화
-                document.querySelectorAll('.message-pagination').forEach(paginationElement => {
-                showPage(currentPage, paginationElement);
-                paginationElement.querySelector('.prev-btn').onclick = function() {
-                    changePage(-1, paginationElement);
-                };
-                paginationElement.querySelector('.next-btn').onclick = function() {
-                    changePage(1, paginationElement);
-                };
-                });
-
             </script>
         </div>
-        
-        <script>
-            let observer = new IntersectionObserver((e)=>{
-                e.forEach((box)=>{
-                    if (box.isIntersecting){
-                        box.target.style.opacity = 1;
-                    }
-                })
-            }, {threshold: 0.2})
-
-            let wwsection = document.querySelectorAll('.ww-section')
-            wwsection.forEach((d)=>{
-                observer.observe(d)
-            })
-            let main_photo_text = document.querySelectorAll('.main-photo-text')
-            main_photo_text.forEach((d)=>{
-                observer.observe(d)
-            })
-        </script>
-        
     </div>
-    <div class="copy-popup">
-        <h2> 팝업 Window </h2>
-        <button>버튼1</button>
-        <button>버튼2</button>
-        <button>버튼3</button>
-    </div>
-    <script>
-        const openBtn = document.querySelectorAll(".open-popup-btn");
-        const popup = document.querySelector(".copy-popup");
-
-        console.log(popup)
-
-        for (i = 0; i < openBtn.length; i++) {
-            openBtn[i].addEventListener("click", function() {
-            // popup.classList.toggle('visible')
-            if (!popup.classList.contains("visible")) {
-                popup.classList.remove("disappear");
-                popup.classList.add("visible");
-            } else {
-                popup.classList.add("disappear");
-                setTimeout(() => popup.classList.remove("visible"), 400);
-            }
-        });
-        }
-    </script>
-</div>
-</div>
-<footer></footer>
-<script src="scripts/main.js"></script>
-
-<div class="bottom_right"><i class="fa fa-arrow-up fa-2x" id="go-to-top" style="cursor: pointer;"></i>
-</div>
-
-<div class="bottom_left">
-</div>
-</div>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

@@ -10305,27 +10305,55 @@ body {
     height: 2em;
 }
 
+
+.popup-container{
+    display: flex;
+    justify-content: center;
+}
+
 .copy-popup {
-    display: none;
-  }
+    background: white;
+    position: fixed;
+    bottom: 3%;
+    width: 80%;
+    height: 8%;
+    border-radius: 0.7em;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 0.8em;
+    z-index: 99;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+}
+
+/* 팝업 닫히는 애니메이션 (위에서 아래로) */
+@keyframes slideOut {
+    0% {
+        transform: translate(0, -50%);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(0, 100%);
+        opacity: 0;
+    }
+}
   
 .copy-popup.visible {
-    background: #f8f1e7;
-    position: absolute;
-    bottom: 0;
-    width: 350px;
-    height: 350px;
-    border: 1px solid black;
-    border-radius: 20px 20px 0 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    animation: popup 0.5s ease-in-out;
+    animation: slideIn 0.5s forwards;
 }
   
 .copy-popup.disappear {
-    width: 350px;
-    height: 0;
-    transition: all 0.5s ease-in-out;
+    animation: slideOut 0.5s forwards;
 }
