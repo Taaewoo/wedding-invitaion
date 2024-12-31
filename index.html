@@ -111,16 +111,17 @@
                         <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                         <div class="swiper-slide"><img src="images/img4.jpeg"></div>
                     </div>
-                </div>
-                <div class="swiper-container gallery-thumbs">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/img1.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img2.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img3.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
-                        <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                    <div class="swiper-container gallery-thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="images/img1.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img2.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img3.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                        </div>
                     </div>
                 </div>
+                
             <!-- </div> -->
 
             <!-- Link Swiper's CSS -->
@@ -132,6 +133,7 @@
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
                     pagination: '.swiper-pagination',
+                    paginationType: 'fraction',
                     spaceBetween: 10,
                     loop:true,
                     loopedSlides: 5, //looped slides should be the same     
@@ -244,15 +246,52 @@
                 <div class="pay-container mt-3 mb-3">
                     <button class="collapsible" style="text-align: center;">신랑측에게</button>
                     <div class="pay-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박태우</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
+                                <a class="account-kakao-pay"></a>
+                            </div>
+                        </div>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>박찬용</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
+                            </div>
+                        </div>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">토스뱅크 1000-2276-9953<br>이진숙</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-2276-9953')" style="letter-spacing:0.2em">복사</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="pay-container mt-3 mb-3">
                     <button class="collapsible" style="text-align: center;">신부측에게</button>
                     <div class="pay-content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">토스뱅크 1000-4076-8089<br>최 란</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-4076-8089')" style="letter-spacing:0.2em">복사</a>
+                                <a class="account-kakao-pay"></a>
+                            </div>
+                        </div>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">국민 035802-04-506904<br>최성모</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('035802-04-506904')" style="letter-spacing:0.2em">복사</a>
+                            </div>
+                        </div>
+                        <div class="pay-content-row">
+                            <div style="font-size: 0.9em;">토스뱅크 1000-3931-7134<br>조병순</div>
+                            <div style="display: flex; flex-direction: column; justify-content:space-between; height: 100%;">
+                                <a class="account-copy open-popup-btn text-center" href="javascript:account_copy('1000-3931-7134')" style="letter-spacing:0.2em">복사</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
             </div>
             <script>
                 var coll = document.getElementsByClassName("collapsible");
@@ -269,6 +308,11 @@
                         } 
                     });
                 }
+
+                function account_copy(text) {
+                    navigator.clipboard.writeText(text)
+                }
+               
             </script>
         </div>
 
@@ -603,6 +647,31 @@
         </script>
         
     </div>
+    <div class="copy-popup">
+        <h2> 팝업 Window </h2>
+        <button>버튼1</button>
+        <button>버튼2</button>
+        <button>버튼3</button>
+    </div>
+    <script>
+        const openBtn = document.querySelectorAll(".open-popup-btn");
+        const popup = document.querySelector(".copy-popup");
+
+        console.log(popup)
+
+        for (i = 0; i < openBtn.length; i++) {
+            openBtn[i].addEventListener("click", function() {
+            // popup.classList.toggle('visible')
+            if (!popup.classList.contains("visible")) {
+                popup.classList.remove("disappear");
+                popup.classList.add("visible");
+            } else {
+                popup.classList.add("disappear");
+                setTimeout(() => popup.classList.remove("visible"), 400);
+            }
+        });
+        }
+    </script>
 </div>
 </div>
 <footer></footer>
