@@ -185,8 +185,8 @@ a {
 }
 
 a:hover {
-    color: #ea9090;
-    text-decoration: underline;
+    /* color: #ea9090;
+    text-decoration: underline; */
 }
 
 a:not([href]):not([tabindex]) {
@@ -9863,6 +9863,10 @@ body {
     object-position: center; /* 이미지의 중심을 기준으로 크기 맞추기 */
 }
 
+.gallery-thumbs{
+    padding: 0 2%;
+}
+
 .gallery-thumbs .swiper-slide{
     height: 100%;
     opacity: 0.4;
@@ -9999,13 +10003,13 @@ body {
 }
 
 .ww-section {
-    padding: 4em 0;
+    padding: 3em 0;
     opacity: 0;
     transition: all 1.5s;
 }
 
 #gallery.ww-section {
-    padding: 4em 3%
+    padding: 4em 0
 }
 
 .gallery-container{
@@ -10191,7 +10195,7 @@ body {
     flex-direction: column;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center;
-    
+    height: 40em;
 }
 
 .message{
@@ -10356,4 +10360,28 @@ body {
   
 .copy-popup.disappear {
     animation: slideOut 0.5s forwards;
+}
+
+.maps-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.map-link{
+    background-color: white;
+    min-width: 97px;
+    width: 30%;
+    height: 3em;
+    padding: 0.1em 0.4em;
+    margin: 0 0.2em;
+    border-radius: 0.7em;
+    border: 1px solid #eaeaea;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-link img{
+    width: 24%;
+    margin-right: 5%;
 }
