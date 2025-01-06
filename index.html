@@ -543,16 +543,16 @@
                             </div>
                         </div>
                     </div>
-                    <a class="message-button text-center"
-                                        href="javascript:account_copy('1000-2276-9953')"
-                                        style="letter-spacing:0.2em">방명록 남기기</a>
+                    
                     <div class="message-bottom">
                         <div class="message-pagination">
                             <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"> < </button>
                             <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
                             <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)"> > </button>
                         </div>
-                        
+                        <a id="modalBtn" class="message-button text-center"
+                                        href="javascript:account_copy('1000-2276-9953')"
+                                        style="letter-spacing:0.2em">방명록 남기기</a>
                     </div>
                 </div>
                 <script>
@@ -710,41 +710,39 @@
                 });
             }
         </script>
-        <div class="popup-container">
-            <div class="message-input-popup">
-                <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
+        <!-- 모달 창 -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeBtn">&times;</span>
+                <p>모달 내용이 여기에 들어갑니다.</p>
+                <p>
+                    사용자가 원하는대로 해당 엘리먼트 부분을 수정하여 사용할 수 있습니다.
+                </p>
             </div>
         </div>
         <script>
-            const messageInputBtn = document.querySelectorAll(".message-button");
-            const messageInputpopup = document.querySelector(".message-input-popup");
-            const content = document.querySelector('.page-content');
+            // HTML 문서의 로딩이 완료되었을 때, 해당 함수를 실행
+            document.addEventListener("DOMContentLoaded", function () {
+                // elements
+                var modalBtn = document.getElementById("modalBtn");
+                var modal = document.getElementById("myModal");
+                var closeBtn = document.getElementById("closeBtn");
 
-
-            console.log(messageInputBtn)
-            console.log(messageInputpopup)
-
-            for (i = 0; i < messageInputBtn.length; i++) {
-                console.log("!@#12321")
-                messageInputBtn[i].addEventListener("click", function () {
-                    // popup.classList.toggle('visible')
-                    console.log("!@#")
-                    if (!messageInputpopup.classList.contains("visible")) {
-                        messageInputpopup.classList.remove("disappear");
-                        messageInputpopup.classList.add("visible");
-                    }
-                    else{
-                        messageInputpopup.classList.remove("visible");
-                        messageInputpopup.classList.add("disappear");
-                    }
-                });
-            }
-
-            content.addEventListener('click', () => {
-                if (!messageInputpopup.classList.contains("visible")) {
-                    messageInputpopup.classList.remove("visible");
-                    messageInputpopup.classList.add("disappear");
+                // functions
+                function toggleModal() {
+                modal.classList.toggle("show");
                 }
+
+                // events
+                modalBtn.addEventListener("click", toggleModal);
+                closeBtn.addEventListener("click", toggleModal);
+
+                window.addEventListener("click", function (event) {
+                // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
+                if (event.target === modal) {
+                    toggleModal();
+                }
+                });
             });
         </script>
     </div>
