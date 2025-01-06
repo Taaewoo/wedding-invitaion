@@ -108,11 +108,11 @@
                     </div>
                     <div class="swiper-container gallery-thumbs">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/img1.jpeg"></div>
-                            <div class="swiper-slide"><img src="images/img2.jpeg"></div>
-                            <div class="swiper-slide"><img src="images/img3.jpeg"></div>
-                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
-                            <div class="swiper-slide"><img src="images/img4.jpeg"></div>
+                            <div class="swiper-slide"><img src="images/img1.jpeg" style="border-radius: 0.4rem;"></div>
+                            <div class="swiper-slide"><img src="images/img2.jpeg" style="border-radius: 0.4rem;"></div>
+                            <div class="swiper-slide"><img src="images/img3.jpeg" style="border-radius: 0.4rem;"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg" style="border-radius: 0.4rem;"></div>
+                            <div class="swiper-slide"><img src="images/img4.jpeg" style="border-radius: 0.4rem;"></div>
                         </div>
                     </div>
                 </div>
@@ -543,10 +543,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="message-pagination">
-                        <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"> < </button>
-                        <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
-                        <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)"> > </button>
+                    <a class="message-button text-center"
+                                        href="javascript:account_copy('1000-2276-9953')"
+                                        style="letter-spacing:0.2em">방명록 남기기</a>
+                    <div class="message-bottom">
+                        <div class="message-pagination">
+                            <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"> < </button>
+                            <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
+                            <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)"> > </button>
+                        </div>
+                        
                     </div>
                 </div>
                 <script>
@@ -677,32 +683,70 @@
                     observer.observe(d)
                 })
             </script>
-            <div class="popup-container">
-                <div class="copy-popup">
-                    <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
-                </div>
-            </div>
-            <script>
-                const openBtn = document.querySelectorAll(".open-popup-btn");
-                const popup = document.querySelector(".copy-popup");
-
-                console.log(popup)
-
-                for (i = 0; i < openBtn.length; i++) {
-                    openBtn[i].addEventListener("click", function () {
-                        // popup.classList.toggle('visible')
-                        if (!popup.classList.contains("visible")) {
-                            popup.classList.remove("disappear");
-                            popup.classList.add("visible");
-                            setTimeout(function() {
-                                popup.classList.add("disappear");
-                                popup.classList.remove("visible");
-                            }, 2000);
-                        }
-                    });
-                }
-            </script>
+            
         </div>
+        <div class="popup-container">
+            <div class="copy-popup">
+                <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
+            </div>
+        </div>
+        <script>
+            const openBtn = document.querySelectorAll(".open-popup-btn");
+            const popup = document.querySelector(".copy-popup");
+
+            console.log(popup)
+
+            for (i = 0; i < openBtn.length; i++) {
+                openBtn[i].addEventListener("click", function () {
+                    // popup.classList.toggle('visible')
+                    if (!popup.classList.contains("visible")) {
+                        popup.classList.remove("disappear");
+                        popup.classList.add("visible");
+                        setTimeout(function() {
+                            popup.classList.add("disappear");
+                            popup.classList.remove("visible");
+                        }, 2000);
+                    }
+                });
+            }
+        </script>
+        <div class="popup-container">
+            <div class="message-input-popup">
+                <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
+            </div>
+        </div>
+        <script>
+            const messageInputBtn = document.querySelectorAll(".message-button");
+            const messageInputpopup = document.querySelector(".message-input-popup");
+            const content = document.querySelector('.page-content');
+
+
+            console.log(messageInputBtn)
+            console.log(messageInputpopup)
+
+            for (i = 0; i < messageInputBtn.length; i++) {
+                console.log("!@#12321")
+                messageInputBtn[i].addEventListener("click", function () {
+                    // popup.classList.toggle('visible')
+                    console.log("!@#")
+                    if (!messageInputpopup.classList.contains("visible")) {
+                        messageInputpopup.classList.remove("disappear");
+                        messageInputpopup.classList.add("visible");
+                    }
+                    else{
+                        messageInputpopup.classList.remove("visible");
+                        messageInputpopup.classList.add("disappear");
+                    }
+                });
+            }
+
+            content.addEventListener('click', () => {
+                if (!messageInputpopup.classList.contains("visible")) {
+                    messageInputpopup.classList.remove("visible");
+                    messageInputpopup.classList.add("disappear");
+                }
+            });
+        </script>
     </div>
     <script src="scripts/main.js"></script>
 </body>
