@@ -5677,18 +5677,6 @@ button.close {
     overflow: hidden;
 }
 
-.modal {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1050;
-    display: none;
-    overflow: hidden;
-    outline: 0;
-}
-
 .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto;
@@ -10418,7 +10406,7 @@ body {
     padding: 3%;
 
     /* 트랜지션 효과 */
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
     opacity: 0;
 
     /* 화면 전체를 덮게하는 코드 */
