@@ -151,11 +151,12 @@
             <div class="ww-section" id="contact">
                 <div class="container text-center">
                     <h2 class="h1 text-center pb-3 ww-content-bold" style="color: #907c60;">축하 연락하기</h2>
-                    <div class="row fs-2">
-                        <div class="col-6 mr-4 ww-content">
+                    <div class="row fs-2" style="display: flex; justify-content: center;">
+                        <div class="mr-3 ww-content">
                             신랑 &nbsp&nbsp&nbsp 박태우
                         </div>
-                        <a href="tel:010-4165-7696" class="contact-button">
+                        <img src="images/dots.png" style="width: 1em; height: 0.25em;">
+                        <a href="tel:010-4165-7696" class="contact-button ml-3 mr-1">
                             <img src="images/call.png" alt="전화 걸기">
                         </a>
                         <a href="sms:010-4165-7696" class="contact-button">
@@ -163,11 +164,12 @@
                         </a>
                         </button>
                     </div>
-                    <div class="row fs-2">
-                        <div class="col-6 mr-4 ww-content">
+                    <div class="row fs-2" style="display: flex; justify-content: center;">
+                        <div class="mr-3 ww-content">
                             신부 &nbsp&nbsp&nbsp 최&nbsp&nbsp&nbsp란
                         </div>
-                        <a href="tel:010-2044-6024" class="contact-button">
+                        <img src="images/dots.png" style="width: 1em; height: 0.25em;">
+                        <a href="tel:010-2044-6024" class="contact-button ml-3 mr-1">
                             <img src="images/call.png" alt="전화 걸기">
                         </a>
                         <a href="sms:010-2044-6024" class="contact-button">
@@ -184,7 +186,7 @@
                                 &nbsp
                                 <span>박찬용</span>
                                 &nbsp
-                                <a href="tel:010-3753-6696" class="family-contact-button">
+                                <a href="tel:010-3753-6696" class="family-contact-button mr-1">
                                     <img src="images/call.png" alt="전화 걸기">
                                 </a>
                                 <a href="sms:010-3753-6696" class="family-contact-button">
@@ -196,7 +198,7 @@
                                 &nbsp
                                 <span>이진숙</span>
                                 &nbsp
-                                <a href="tel:010-7303-1350" class="family-contact-button">
+                                <a href="tel:010-7303-1350" class="family-contact-button mr-1">
                                     <img src="images/call.png" alt="전화 걸기">
                                 </a>
                                 <a href="sms:010-7303-1350" class="family-contact-button">
@@ -211,7 +213,7 @@
                                 &nbsp
                                 <span>최성모</span>
                                 &nbsp
-                                <a href="tel:010-2044-6024" class="family-contact-button">
+                                <a href="tel:010-2044-6024" class="family-contact-button mr-1">
                                     <img src="images/call.png" alt="전화 걸기">
                                 </a>
                                 <a href="sms:010-2044-6024" class="family-contact-button">
@@ -223,7 +225,7 @@
                                 &nbsp
                                 <span>조병순</span>
                                 &nbsp
-                                <a href="tel:010-4639-4927" class="family-contact-button">
+                                <a href="tel:010-4639-4927" class="family-contact-button mr-1">
                                     <img src="images/call.png" alt="전화 걸기">
                                 </a>
                                 <a href="sms:010-8029-7312" class="family-contact-button">
@@ -550,8 +552,7 @@
                             <div class="page-numbers"></div> <!-- 페이지 번호 버튼들이 들어갈 부분 -->
                             <button class="pagination-btn page-arrow next-btn" onclick="changePage(1)"> > </button>
                         </div>
-                        <a id="modalBtn" class="message-button text-center"
-                                        href="javascript:account_copy('1000-2276-9953')"
+                        <a id="message-modal-button" class="message-button text-center"
                                         style="letter-spacing:0.2em">방명록 남기기</a>
                     </div>
                 </div>
@@ -711,26 +712,36 @@
             }
         </script>
         <!-- 모달 창 -->
-        <div id="myModal" class="modal">
+        <div id="message-input-modal" class="modal">
             <div class="modal-content">
                 <span class="close" id="closeBtn">&times;</span>
-                <p>모달 내용이 여기에 들어갑니다.</p>
-                <p>
-                    사용자가 원하는대로 해당 엘리먼트 부분을 수정하여 사용할 수 있습니다.
-                </p>
+                <div class="message-input-head">
+                    <div class="h2 mt-3 mb-4 text-center ww-title">축하 메시지 작성하기</div>
+                    <div class="text-center mb-4 ww-content">작성 완료 후 방명록에 기록되기까지<br> 몇 분 정도 소요될 수 있습니다</div>
+                </div>
+                <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxHer1lobaIWef6d67tGVnC07qKAtwV_JRddSdNDjCViiDpoydKKPdnjLbREz8crpYYWg/exec">
+                    <input id="message-input-name" name="name" class="message-input mb-3" placeholder="성함을 남겨주세요">
+                    <textarea id="message-input-content" name="message" class="message-input mb-3" placeholder="내용을 작성해주세요."></textarea>
+                    <button type="submit" class="message-input-submit">작성 완료</button>
+                </form>
+            </div>
+        </div>
+        <div class="popup-container">
+            <div class="finish-popup">
+                <div class="ww-content ml-4"> 작성이 완료되었습니다.<br>방명록에 기록되기까지 몇 분 정도 소요될 수 있습니다.</div>
             </div>
         </div>
         <script>
             // HTML 문서의 로딩이 완료되었을 때, 해당 함수를 실행
             document.addEventListener("DOMContentLoaded", function () {
                 // elements
-                var modalBtn = document.getElementById("modalBtn");
-                var modal = document.getElementById("myModal");
+                var modalBtn = document.getElementById("message-modal-button");
+                var modal = document.getElementById("message-input-modal");
                 var closeBtn = document.getElementById("closeBtn");
 
                 // functions
                 function toggleModal() {
-                modal.classList.toggle("show");
+                    modal.classList.toggle("show");
                 }
 
                 // events
@@ -744,9 +755,141 @@
                 }
                 });
             });
+
+            function getTextValues() {
+                // input과 textarea에서 값 가져오기
+                var inputText = document.getElementById('message-input-name').value;
+                var textareaText = document.getElementById('message-input-content').value;
+
+                // 결과를 화면에 출력
+                console.log(inputText + " " + textareaText)
+            }
         </script>
     </div>
     <script src="scripts/main.js"></script>
+    <script>
+        (function() {
+            // get all data in form and return object
+            function getFormData(form) {
+                var elements = form.elements;
+                var honeypot;
+
+                var fields = Object.keys(elements).filter(function(k) {
+                if (elements[k].name === "honeypot") {
+                    honeypot = elements[k].value;
+                    return false;
+                }
+                return true;
+                }).map(function(k) {
+                if(elements[k].name !== undefined) {
+                    return elements[k].name;
+                // special case for Edge's html collection
+                }else if(elements[k].length > 0){
+                    return elements[k].item(0).name;
+                }
+                }).filter(function(item, pos, self) {
+                return self.indexOf(item) == pos && item;
+                });
+
+                var formData = {};
+                fields.forEach(function(name){
+                var element = elements[name];
+                
+                // singular form elements just have one value
+                formData[name] = element.value;
+
+                // when our element has multiple items, get their values
+                if (element.length) {
+                    var data = [];
+                    for (var i = 0; i < element.length; i++) {
+                    var item = element.item(i);
+                    if (item.checked || item.selected) {
+                        data.push(item.value);
+                    }
+                    }
+                    formData[name] = data.join(', ');
+                }
+                });
+
+                // add form-specific values into the data
+                formData.formDataNameOrder = JSON.stringify(fields);
+                formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+                formData.formGoogleSendEmail
+                = form.dataset.email || ""; // no email by default
+
+                return {data: formData, honeypot: honeypot};
+            }
+
+            function handleFormSubmit(event) {  // handles form submit without any jquery
+                event.preventDefault();           // we are submitting via xhr below
+                var form = event.target;
+                var formData = getFormData(form);
+                var data = formData.data;
+
+                // If a honeypot field is filled, assume it was done so by a spam bot.
+                if (formData.honeypot) {
+                return false;
+                }
+
+                // disableAllButtons(form);
+                var url = form.action;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url);
+                // xhr.withCredentials = true;
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState === 4 && xhr.status === 200) {
+                        form.reset();
+                        var formElements = form.querySelector(".form-elements")
+                        if (formElements) {
+                            formElements.style.display = "none"; // hide form
+                        }
+                        var thankYouMessage = document.querySelector(".finish-popup");
+                        console.log(thankYouMessage)
+                        if (thankYouMessage) {
+                            const finish_popup = document.querySelector(".finish-popup");
+                            const input_modal = document.getElementById("message-input-modal");
+
+                            console.log(finish_popup)
+
+                            if (!finish_popup.classList.contains("visible")) {
+                                finish_popup.classList.remove("disappear");
+                                finish_popup.classList.add("visible");
+                                setTimeout(function() {
+                                    finish_popup.classList.add("disappear");
+                                    finish_popup.classList.remove("visible");
+                                }, 4000);
+
+                                input_modal.classList.toggle("show");
+                            }
+
+                        }
+                    }
+                };
+                // url encode form data for sending as post data
+                var encoded = Object.keys(data).map(function(k) {
+                    return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                }).join('&');
+                xhr.send(encoded);
+            }
+            
+            function loaded() {
+                // bind to the submit event of our form
+                var forms = document.querySelectorAll("form.gform");
+                for (var i = 0; i < forms.length; i++) {
+                forms[i].addEventListener("submit", handleFormSubmit, false);
+                }
+            };
+            document.addEventListener("DOMContentLoaded", loaded, false);
+
+            function disableAllButtons(form) {
+                var buttons = form.querySelectorAll("button");
+                for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+                }
+            }
+            })();
+    </script>
 </body>
 
 </html>
