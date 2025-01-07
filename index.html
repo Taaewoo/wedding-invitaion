@@ -701,12 +701,17 @@
                 openBtn[i].addEventListener("click", function () {
                     // popup.classList.toggle('visible')
                     if (!popup.classList.contains("visible")) {
+                        popup.style.zIndex = 99;
                         popup.classList.remove("disappear");
                         popup.classList.add("visible");
                         setTimeout(function() {
                             popup.classList.add("disappear");
                             popup.classList.remove("visible");
+                            setTimeout(function() {
+                                popup.style.zIndex = 1;
+                            }, 500);
                         }, 2000);
+                        
                     }
                 });
             }
@@ -742,17 +747,33 @@
                 // functions
                 function toggleModal() {
                     modal.classList.toggle("show");
+                    if(modal.classList.contains("show")){
+                        modal.style.zIndex = 99;
+                    }
+                    else{
+                        setTimeout(function() {
+                            modal.style.zIndex = 1;
+                        }, 500);
+                    }
+                    
                 }
 
                 // events
                 modalBtn.addEventListener("click", toggleModal);
-                closeBtn.addEventListener("click", toggleModal);
+                closeBtn.addEventListener("click", function (event) {
+                    if(modal.classList.contains("show")){
+                        toggleModal();
+                    }
+                });
 
                 window.addEventListener("click", function (event) {
-                // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
-                if (event.target === modal) {
-                    toggleModal();
-                }
+                
+                    if(modal.classList.contains("show")){
+                        // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
+                        if (event.target === modal) {
+                            toggleModal();
+                        }
+                    }
                 });
             });
 
@@ -853,16 +874,22 @@
                             console.log(finish_popup)
 
                             if (!finish_popup.classList.contains("visible")) {
+                                finish_popup.style.zIndex = 99;
                                 finish_popup.classList.remove("disappear");
                                 finish_popup.classList.add("visible");
                                 setTimeout(function() {
                                     finish_popup.classList.add("disappear");
                                     finish_popup.classList.remove("visible");
+                                    setTimeout(function() {
+                                        finish_popup.style.zIndex = 1;
+                                    }, 500);
                                 }, 4000);
 
                                 input_modal.classList.toggle("show");
+                                setTimeout(function() {
+                                    input_modal.style.zIndex = 1;
+                                }, 500);
                             }
-
                         }
                     }
                 };

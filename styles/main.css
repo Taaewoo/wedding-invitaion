@@ -10329,7 +10329,7 @@ body {
     justify-content: left;
     align-items: center;
     font-size: 0.8em;
-    z-index: 99;
+    z-index: 1;
     opacity: 0;
 }
 
@@ -10519,7 +10519,7 @@ body {
     justify-content: left;
     align-items: center;
     font-size: 0.8em;
-    z-index: 99;
+    z-index: 1;
     opacity: 0;
 }
 
@@ -10530,4 +10530,9 @@ body {
   
 .finish-popup.disappear {
     animation: slideOut 0.5s forwards;
+}
+
+.page-content{
+    position: sticky;
+    z-index: 10;
 }
