@@ -10221,7 +10221,6 @@ body {
   padding: 0.3em 0.5em;
   margin: 0 5px;
   cursor: pointer;
-  background-color: #f8f9fa;  /* 기본 배경색 */
   color: black;  /* 기본 텍스트 색 */
   font-size: 0.8em;
   border: none;  /* 기본 상태에서 테두리 제거 */
@@ -10523,4 +10522,19 @@ body {
 .page-content{
     position: sticky;
     z-index: 10;
+}
+
+.button-row{
+    margin: 0; 
+    display: flex; 
+    justify-content: center;
+}
+
+.loc-notice{
+    background-color: #EDE6DA;
+    border-radius: 0.7em;
+}
+
+.pagination-btn{
+    background-color: #fff9ee;
 }
