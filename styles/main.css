@@ -80,7 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff9ee;
+    background-color: #FFFDF9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
   }
 
@@ -611,7 +611,6 @@ pre code {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     display: flex;
-    margin-top: 1rem;
     align-items: center;      /* 세로 가운데 정렬 */
 }
 
@@ -635,8 +634,6 @@ pre code {
     position: relative;
     width: 100%;
     min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
 }
 
 .col {
@@ -8030,7 +8027,7 @@ button.bg-dark:focus {
 
 .pt-1,
 .py-1 {
-    padding-top: 0.25rem !important;
+    padding-top: 0.2rem !important;
 }
 
 .pr-1,
@@ -8169,7 +8166,25 @@ button.bg-dark:focus {
 }
 
 /* font size */ 
-@media (max-width: 450px) {
+@media (max-width: 350px) {
+    .fs-1 {
+        font-size: 0.9em;
+    }
+    
+    .fs-2 {
+        font-size: 1.3em;
+    }
+
+    .fs-3 {
+        font-size: 1.6em;
+    }
+
+    .fs-4 {
+        font-size: 1.8em;
+    }
+}
+
+@media (min-width: 350px) {
     .fs-1 {
         font-size: 1em;
     }
@@ -9749,7 +9764,7 @@ body {
 
 /* Home Page Style */
 .ww-home-page {
-    background: url("../images/main_photo.jpg") no-repeat;
+    background: url("../images/main_photo.jpeg") no-repeat;
     background-position: top center;
     background-size: cover;
     width: 100%;
@@ -9842,7 +9857,7 @@ body {
 /* 갤러리 컨테이너 */
 .swiper-container {
     width: 100%;
-    margin: 15px auto;
+    margin: 1em 0;
 }
 
 .swiper-slide img{
@@ -10096,13 +10111,13 @@ body {
 }
 
 .collapsible {
-    background-color: #fffefb;
-    color: black;
-    border-radius: 10px 10px 0 0;
+    background-color: #DEC6A4;
+    color: white;
+    border-radius: 1em 1em 0.5em 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     cursor: pointer;
-    padding: 18px;
+    padding: 1em;
     width: 90%;
     border: none;
     text-align: left;
@@ -10111,13 +10126,13 @@ body {
 }
 
 .active, .collapsible:hover {
-    background-color: #907c60;
+    background-color: #DEC6A4;
     color: white;
 }
 
 .collapsible:after {
     content: '\002B';
-    color: black;
+    color: white;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -10184,7 +10199,7 @@ body {
     flex-direction: column;
     justify-content: center; /* 수평 가운데 정렬 */
     align-items: center;
-    height: 40em;
+    height: auto;
 }
 
 .message{
@@ -10193,7 +10208,7 @@ body {
     margin-bottom: 1em;
     background-color: white;
     border-radius: 1em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
+    border: 1px solid #F2F2F2;
 }
 
 .message-content{
@@ -10240,12 +10255,12 @@ body {
 }
 
 .message-pagination .page-button:active {
-  background-color: #907c60;  /* 클릭시 배경색 */
+  background-color: #DEC6A4;  /* 클릭시 배경색 */
   color: white;  /* 클릭시 텍스트 색 */
 }
 
 .message-pagination .page-active {
-  background-color: #907c60;  /* 활성 페이지 배경색 */
+  background-color: #DEC6A4;  /* 활성 페이지 배경색 */
   color: white;  /* 활성 페이지 텍스트 색 */
   font-weight: bold;  /* 강조된 텍스트 */
 }
@@ -10261,7 +10276,7 @@ body {
 }
 
 #timer {
-    font-size: 1.6em;
+    font-size: 1.4em;
     font-weight: 200;
     color: black;
     width: 100%;
@@ -10289,12 +10304,16 @@ body {
 }
 
 .loc-info-title{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .loc-info-title img{
     width: 2em;
     height: 2em;
+}
+
+.loc-info-type{
+    margin-top: 1em;
 }
 
 
@@ -10382,20 +10401,23 @@ body {
 
 .message-bottom{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 0 1.5em;
 }
 
 .message-button{
     display: flex;
-    background-color: #907c60;
+    justify-content: center;
+    background-color: #DEC6A4;
     color: white !important;
     font-size: 0.8em;
+    width: 100%;
     align-items: center;
     border-radius: 1em;
-    border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    padding: 0 1em;
+    padding: 0.7em 1em;
 }
 
 .modal {
@@ -10481,7 +10503,7 @@ body {
 .message-input-submit{
     display: flex;
     justify-content: center;
-    background-color: #907c60;
+    background-color: #DEC6A4;
     color: white;
     border: 1px;
     border-radius: 0.5em;
@@ -10531,10 +10553,45 @@ body {
 }
 
 .loc-notice{
-    background-color: #EDE6DA;
+    background-color: #F4EFE6;
     border-radius: 0.7em;
 }
 
 .pagination-btn{
     background-color: #fff9ee;
+}
+
+.dot{
+    border-radius: 50%;
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.1em;
+}
+
+.line2{
+    background-color: #22B32B;
+}
+
+.line6{
+    background-color: #B35922;
+}
+
+.middle_line{
+    background-color: #28D5CC;
+}
+
+.airport_line{
+    background-color: #10A3C0;
+}
+
+.blue_bus{
+    background-color: #0F4EC2;
+}
+
+.green_bus{
+    background-color: #2ECC06;
+}
+
+.red_bus{
+    background-color: #C00C0C;
 }
