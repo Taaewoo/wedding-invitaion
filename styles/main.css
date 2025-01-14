@@ -9857,7 +9857,7 @@ body {
 /* 갤러리 컨테이너 */
 .swiper-container {
     width: 100%;
-    margin: 1em 0;
+    margin: 0.8em 0;
 }
 
 .swiper-slide img{
@@ -9962,47 +9962,27 @@ body {
 }
 
 @font-face {
-    font-family: "CocoSharp Trial";
-    src: url(../fonts/Coco-Sharp-Extrabold-trial.ttf);
+    font-family: "NotoSerif";
+    src: url(../fonts/NotoSerifKR-Regular.otf);
 }
 
 @font-face {
-    font-family: "Galvji";
-    src: url(../fonts/Galvji.ttc);
-}
-
-@font-face {
-    font-family: "MaruBuri";
-    src: url(../fonts/MaruBuri-Regular.otf);
-}
-
-@font-face {
-    font-family: "MaruBuri Bold";
-    src: url(../fonts/MaruBuri-Bold.otf);
-}
-
-@font-face {
-    font-family: "NanumSquare Round";
-    src: url(../fonts/NanumSquareRoundOTFR.otf);
-}
-
-@font-face {
-    font-family: "NanumSquare Round Bold";
-    src: url(../fonts/NanumSquareRoundOTFB.otf);
+    font-family: "GowunDodum";
+    src: url(../fonts/GowunDodum-Regular.ttf);
 }
 
 /* Common Style */
 .ww-title {
     color: #907c60;
-    font-family: "MaruBuri Bold";
+    font-family: "NotoSerif";
 }
 
 .ww-content {
-    font-family: "NanumSquare Round"
+    font-family: "GowunDodum"
 }
 
 .ww-content-bold {
-    font-family: "NanumSquare Round Bold"
+    font-family: "GowunDodum"
 }
 
 .ww-section {
@@ -10327,6 +10307,7 @@ body {
     background: white;
     position: fixed;
     bottom: -1%;
+    left: 10%;
     width: 80%;
     height: 8%;
     border-radius: 0.7em;
@@ -10411,13 +10392,13 @@ body {
     display: flex;
     justify-content: center;
     background-color: #DEC6A4;
+    font-size: 0.9em;
     color: white !important;
-    font-size: 0.8em;
     width: 100%;
     align-items: center;
-    border-radius: 1em;
+    border-radius: 0.8em;
     cursor: pointer;
-    padding: 0.7em 1em;
+    padding: 0.6em 1em;
 }
 
 .modal {
@@ -10520,6 +10501,7 @@ body {
     background: white;
     position: fixed;
     bottom: -1%;
+    left: 7.5%;
     width: 85%;
     height: 8%;
     border-radius: 0.7em;
@@ -10594,4 +10576,64 @@ body {
 
 .red_bus{
     background-color: #C00C0C;
+}
+
+.loc-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.address-copy{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-size: 0.75em;
+    color: black !important;
+    width: auto;
+    align-items: center;
+    border-radius: 0.8em;
+    border: 1.5px solid #eaeaea;
+    cursor: pointer;
+    padding: 0.8em 0.9em;
+}
+
+.sketch-button{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    font-size: 0.75em;
+    color: black !important;
+    width: auto;
+    align-items: center;
+    border-radius: 0.8em;
+    border: 1.5px solid #eaeaea;
+    cursor: pointer;
+    padding: 0.8em 0.9em;
+}
+
+.sketch-map{
+    background: url("../images/sketch_map.jpeg") no-repeat;
+    background-position: top center;
+    background-size: contain;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+}
+
+.sketch-map-content{
+        /* 스타일 - customize */
+        max-width: 500px;
+        width: 100%;
+        height: 80%;
+        background-color: white;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    
+        /* 트랜지션 효과 */
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    
+        transform: scale(0.8);
 }
