@@ -20,7 +20,7 @@
 </head>
 
 <body id="top">
-    <div class="wrapper">
+    <div class="wrapper ww-content">
         <div class="page-content">
             <div class="ww-home-page" id="home">
                 <div class="main-photo-text"></div>
@@ -42,10 +42,10 @@
             <div class="ww-section" id="couple">
                 <div class="container text-center">
                     <div class="col-md-12">
-                        <p class="mt-1 mb-5 fs-3 ww-content-bold" style="color: #907c60;">
+                        <p class="mt-1 mb-4 fs-3 ww-title" style="color: #907c60;">
                             저희 결혼합니다
                         </p>
-                        <p class="mt-6 fs-1 ww-content" style="line-height: 1.2;">
+                        <p class="fs-1 ww-content" style="line-height: 1.2;">
                             7번째 겨울을 보내면서<br><br>서로 닮아가고, 무엇보다 함께 있으면<br><br>누구보다 즐거운 사람을 만났습니다.<br><br><br>
                             처음 눈이 마주쳤던 이곳에서<br><br>한결같은 마음으로<br><br>'평생' 함께할 것을 약속하며<br><br>새로운 봄을 맞이하려고 합니다.<br><br><br>가까이에서
                             축복해 주시면<br><br>감사하겠습니다. :)
@@ -56,8 +56,8 @@
 
             <div class="ww-section bg-light" id="calendar">
                 <div class="container text-center" style="display: flex; flex-direction: column; align-items: center;">
-                    <div class="fs-4 text-center mt-3 mb-4 ww-title">결혼식 일정</div>
-                    <div class="calendar mt-5">
+                    <div class="fs-3 text-center mt-3 mb-4 ww-title">결혼식 일정</div>
+                    <div class="calendar">
                         <img src="images/calendar.png">
                     </div>
                     <div class="pt-3 pb-3 mb-3 ww-content" style="width: 80%; border: 0.8px solid #BFBFBF; border-left: none; border-right: none;">
@@ -96,7 +96,7 @@
             </div>
 
             <div class="ww-section" id="gallery">
-                <div class="fs-4 text-center pb-3 ww-title">사진첩</div>
+                <div class="fs-3 text-center pb-3 ww-title">사진첩</div>
                 <!-- <div class="gallery-container"> -->
                 <div class="swiper-container gallery-top">
                     <div class="swiper-pagination" style="display: flex; align-items: center;"></div>
@@ -139,6 +139,7 @@
                         spaceBetween: 10,
                         slidesPerView: 5,
                         touchRatio: 0.2,
+                        centeredSlides: true,
                         loop: true,
                         loopedSlides: 5, //looped slides should be the same
                         slideToClickedSlide: true
@@ -151,7 +152,7 @@
 
             <div class="ww-section" id="contact">
                 <div class="container text-center">
-                    <div class="fs-4 text-center pb-3 ww-title">따뜻한 축하 건네기</div>
+                    <div class="fs-3 text-center pb-3 ww-title">따뜻한 축하 건네기</div>
                     <div class="row" style="display: flex; justify-content: center;">
                         <div class="col text-center">
                             <div class="ww-content mb-2" style="font-size: 1em;">
@@ -258,7 +259,7 @@
             </div>
 
             <div class="ww-section" id="donation">
-                <div class="fs-4 text-center pb-3 ww-title">아끼는 마음 보내기</div>
+                <div class="fs-3 text-center pb-3 ww-title">아끼는 마음 보내기</div>
                 <div class="container folding ww-content">
                     <div class="pay-container mt-3 mb-3">
                         <button class="collapsible" style="text-align: center;">신랑측에게 보내기</button>
@@ -353,13 +354,21 @@
 
             <div class="ww-section" id="map">
                 <div class="container">
-                    <div class="fs-4 text-center pb-3 ww-title">오시는 길</div>
+                    <div class="fs-3 text-center pb-3 ww-title">오시는 길</div>
                     <p class="text-center mt-2 mb-1 fs-1 ww-content-bold">
                         합정 웨딩시그니처 트리니티홀
                     </p>
-                    <p class="text-center mt-1 mb-3 fs-1 ww-content">
+                    <p class="text-center mt-1 mb-2 fs-1 ww-content">
                         서울시 마포구 양화로 87 (서교동 378-7)
                     </p>
+                    <div class="row loc-button-container mb-3">
+                        <a class="address-copy open-popup-btn text-center mr-1" href="javascript:account_copy('서울시 마포구 양화로 87')" style="letter-spacing:0.2em">
+                            주소 복사
+                        </a>
+                        <a id="sketch-button" class="sketch-button text-center ml-1" style="letter-spacing:0.2em">
+                            약도 보기
+                        </a>
+                    </div>
                     <!-- * 카카오맵 - 지도퍼가기 -->
                     <!-- 1. 지도 노드 -->
                     <div id="daumRoughmapContainer1734767297977" class="root_daum_roughmap root_daum_roughmap_landing"
@@ -473,6 +482,40 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // elements
+                    var sketchButton = document.getElementById("sketch-button");
+                    var sketchModal = document.getElementById("sketch-map-modal");
+
+                    // functions
+                    function toggleModal() {
+                        sketchModal.classList.toggle("show");
+                        if(sketchModal.classList.contains("show")){
+                            sketchModal.style.zIndex = 99;
+                        }
+                        else{
+                            setTimeout(function() {
+                                sketchModal.style.zIndex = 1;
+                            }, 500);
+                        }
+                        
+                    }
+
+                    // events
+                    sketchButton.addEventListener("click", toggleModal);
+
+                    window.addEventListener("click", function (event) {
+                    
+                        if(sketchModal.classList.contains("show")){
+                            // 모달의 검은색 배경 부분이 클릭된 경우 닫히도록 하는 코드
+                            if (event.target === sketchModal) {
+                                toggleModal();
+                            }
+                        }
+                    });
+                });
+            </script>
 
             <div class="ww-section" id="notice" style="background-color: #F4EFE6;">
                 <div class="container">
@@ -489,7 +532,7 @@
 
             <div class="ww-section" id="guestbook">
                 <div class="container">
-                    <div class="fs-4 text-center pb-3 ww-title">축하 방명록</div>
+                    <div class="fs-3 text-center pb-3 ww-title">축하 방명록</div>
                     <p class="mt-4 mb-4 fs-1 text-center ww-content">
                         신랑, 신부의 결혼을 축하해주세요!
                     </p>
@@ -760,7 +803,7 @@
                     </div>
                     <div class="message-bottom">
                         <a id="message-modal-button" class="message-button text-center mb-2" style="letter-spacing:0.2em">
-                            방명록 남기기
+                            축하 방명록 남기기
                         </a>
                         <div class="message-pagination">
                             <button class="pagination-btn page-arrow prev-btn" onclick="changePage(-1)"> < </button>
@@ -901,7 +944,7 @@
         </div>
         <div class="popup-container">
             <div class="copy-popup">
-                <div class="ww-content ml-4"> 계좌번호가 복사되었습니다. </div>
+                <div class="ww-content ml-4"> 복사가 완료되었습니다. </div>
             </div>
         </div>
         <script>
@@ -930,11 +973,17 @@
             }
         </script>
         <!-- 모달 창 -->
+        <div id="sketch-map-modal" class="modal">
+            <div class="sketch-map">
+
+            </div>
+        </div>
+
         <div id="message-input-modal" class="modal">
             <div class="modal-content">
                 <span class="close" id="closeBtn">&times;</span>
                 <div class="message-input-head">
-                    <div class="fs-4 mt-3 mb-4 text-center ww-title">축하 메시지 작성하기</div>
+                    <div class="fs-3 mt-3 mb-4 text-center ww-title">축하 메시지 작성하기</div>
                     <div class="text-center mb-4 ww-content">작성 완료 후 방명록에 기록되기까지<br> 몇 분 정도 소요될 수 있습니다</div>
                 </div>
                 <form class="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxHer1lobaIWef6d67tGVnC07qKAtwV_JRddSdNDjCViiDpoydKKPdnjLbREz8crpYYWg/exec">
