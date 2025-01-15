@@ -9963,7 +9963,7 @@ body {
 
 @font-face {
     font-family: "NotoSerif";
-    src: url(../fonts/NotoSerifKR-Regular.otf);
+    src: url(../fonts/NotoSerifKR-Bold.otf);
 }
 
 @font-face {
@@ -10111,15 +10111,17 @@ body {
 }
 
 .collapsible:after {
-    content: '\002B';
+    font-family: 'Font Awesome 5 Free', 'sans-serif';
+    content: '\F078';
     color: white;
     font-weight: bold;
     float: right;
     margin-left: 5px;
+    transition: transform 0.3s ease;
 }
 
 .active:after {
-    content: "\2212";
+    transform: rotate(180deg); /* 180도 회전 */
 }
 
 .pay-container{
@@ -10256,7 +10258,6 @@ body {
 }
 
 #timer {
-    font-size: 1.4em;
     font-weight: 200;
     color: black;
     width: 100%;
@@ -10266,21 +10267,20 @@ body {
 #timer div {
     display: inline-block;
     width: 2.5em;
-    padding: 0.1em;  
-    background: #fffcf7;
+    padding: 0.3em 0.2em;  
+    background: #FFFAF2;
+    color: #71320C;
     border-radius: 10px;
-    border: 0.7px solid rgba(0, 0, 0, 0.1);
+    border: 0.7px solid #FFE1B2;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     margin: 0.3em;
 }
 
 #timer div span {
-    color: gray;
+    color: #71320C;
     display: block;
     margin-top: 0.1em;
     font-size: 0.5em;
-    font-weight: 200;
-    font-family: "NanumSquareRound"
 }
 
 .loc-info-title{
@@ -10398,7 +10398,7 @@ body {
     align-items: center;
     border-radius: 0.8em;
     cursor: pointer;
-    padding: 0.6em 1em;
+    padding: 0.8em 1em;
 }
 
 .modal {
