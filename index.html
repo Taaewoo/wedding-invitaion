@@ -10,6 +10,8 @@
     <meta property="og:image" content="https://github.com/Taaewoo/wedding-invitaion/blob/master/images/main_photo.jpeg?raw=true">
     <link href="styles/main.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+    <!-- 헤더 또는 해당 api 사용 페이지에 추가 -->
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Swiper JS -->
     <script src="scripts/swiper.min.js"></script>
@@ -103,20 +105,20 @@
                 <div class="swiper-container gallery-top">
                     <div class="swiper-pagination" style="display: flex; align-items: center;"></div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/studio/0606_Y_241116 중간.png"></div>
-                        <div class="swiper-slide"><img src="images/studio/0655_Y_241116 중간.png"></div>
-                        <div class="swiper-slide"><img src="images/studio/0955_Y_241116 중간.png"></div>
-                        <div class="swiper-slide"><img src="images/studio/1174_Y_241116 중간.png"></div>
-                        <div class="swiper-slide"><img src="images/studio/1259_Y_241116 중간.png"></div>
+                        <div class="swiper-slide"><img src="images/studio/0606_Y_241116.png"></div>
+                        <div class="swiper-slide"><img src="images/studio/0655_Y_241116.png"></div>
+                        <div class="swiper-slide"><img src="images/studio/0955_Y_241116.png"></div>
+                        <div class="swiper-slide"><img src="images/studio/1174_Y_241116.png"></div>
+                        <div class="swiper-slide"><img src="images/studio/1259_Y_241116.png"></div>
                     </div>
                 </div>
                 <div class="swiper-container gallery-thumbs">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/studio/0606_Y_241116 중간.png" style="border-radius: 0.4rem;"></div>
-                        <div class="swiper-slide"><img src="images/studio/0655_Y_241116 중간.png" style="border-radius: 0.4rem;"></div>
-                        <div class="swiper-slide"><img src="images/studio/0955_Y_241116 중간.png" style="border-radius: 0.4rem;"></div>
-                        <div class="swiper-slide"><img src="images/studio/1174_Y_241116 중간.png" style="border-radius: 0.4rem;"></div>
-                        <div class="swiper-slide"><img src="images/studio/1259_Y_241116 중간.png" style="border-radius: 0.4rem;"></div>
+                        <div class="swiper-slide"><img src="images/studio/0606_Y_241116.png" style="border-radius: 0.4rem;"></div>
+                        <div class="swiper-slide"><img src="images/studio/0655_Y_241116.png" style="border-radius: 0.4rem;"></div>
+                        <div class="swiper-slide"><img src="images/studio/0955_Y_241116.png" style="border-radius: 0.4rem;"></div>
+                        <div class="swiper-slide"><img src="images/studio/1174_Y_241116.png" style="border-radius: 0.4rem;"></div>
+                        <div class="swiper-slide"><img src="images/studio/1259_Y_241116.png" style="border-radius: 0.4rem;"></div>
                     </div>
                 </div>
 
@@ -930,12 +932,29 @@
                         란, 태우가 직접 제작한 모바일 청첩장입니다 :)<br>
                         부족한 점이 있더라도 너그럽게<br>
                         이해해 주신다면 감사하겠습니다!<br>
-                    </div>
+                   </div>
                     <div class="ww-content text-center mb-2">
                         copyright © ran&taewoo. All rights reserved.
                     </div>
+                    <div class="btn_box">
+                        <a id="kakaotalk-sharing-btn" href="javascript:shareMessage()">
+                            <button type="button" class="kakao_btn">
+                                <img src="images/flower.png" alt="카카오톡 공유">
+                            </button>
+                        </a>
+                        <span>카카오톡 공유</span>
+                    </div>
                 </div>
             </div>
+            <script>
+                function shareMessage(){
+                    Kakao.init('bea904e7891f3dc26f4fa26bacba7200');
+                    Kakao.Share.createCustomButton({
+                        container: '#kakaotalk-sharing-btn',
+                        templateId: 116442,
+                    });
+                }
+            </script>
 
             <script>
                 let observer = new IntersectionObserver((e) => {
