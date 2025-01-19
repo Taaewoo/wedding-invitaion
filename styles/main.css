@@ -9971,10 +9971,15 @@ body {
     src: url(../fonts/GowunDodum-Regular.ttf);
 }
 
+@font-face {
+    font-family: "GowunBatang Bold";
+    src: url(../fonts/GowunBatang-Bold.ttf);
+}
+
 /* Common Style */
 .ww-title {
     color: #907c60;
-    font-family: "NotoSerif";
+    font-family: "GowunBatang Bold";
 }
 
 .ww-content {
