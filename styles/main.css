@@ -8186,7 +8186,7 @@ button.bg-dark:focus {
 
 @media (min-width: 350px) {
     .fs-1 {
-        font-size: 1em;
+        font-size: 0.9em;
     }
     
     .fs-2 {
@@ -10091,29 +10091,27 @@ body {
 }
 
 .collapsible {
-    background-color: #DEC6A4;
-    color: white;
+    background-color: white;
+    color: #262f3c;
     border-radius: 1em 1em 0.5em 0.5em;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
     cursor: pointer;
     padding: 1em;
     width: 90%;
-    border: none;
     text-align: left;
     outline: none;
     font-size: 15px;
 }
 
 .active, .collapsible:hover {
-    background-color: #DEC6A4;
-    color: white;
+    background-color: white;
+    color: #262f3c;
 }
 
 .collapsible:after {
     font-family: 'Font Awesome 5 Free', 'sans-serif';
     content: '\F078';
-    color: white;
+    color: #999;
     font-weight: bold;
     float: right;
     margin-left: 5px;
@@ -10139,7 +10137,6 @@ body {
     overflow: hidden;
     transition: max-height 0.4s ease-out;
     background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 약간의 그림자 추가 */
 }
 
 .pay-content-row{
@@ -10160,8 +10157,7 @@ body {
     width: 4em;
     height: 2em;
     color: black;
-    font-size: 0.9em;
-    font-family: "NanumSquare Round Bold"
+    font-size: 0.8em;
 }
 
 .account-kakao-pay{
@@ -10296,6 +10292,10 @@ body {
     margin-top: 1em;
 }
 
+.loc-info-content{
+    padding-left: 0.5em;
+}
+
 
 .popup-container{
     display: flex;
@@ -10377,7 +10377,7 @@ body {
 }
 
 .calendar img{
-    width: 90%
+    width: 80%
 }
 
 .message-bottom{
@@ -10391,14 +10391,15 @@ body {
 .message-button{
     display: flex;
     justify-content: center;
-    background-color: #DEC6A4;
+    background-color: white;
+    color: #262f3c;
     font-size: 0.9em;
-    color: white !important;
     width: 100%;
     align-items: center;
     border-radius: 0.8em;
     cursor: pointer;
     padding: 0.8em 1em;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .modal {
